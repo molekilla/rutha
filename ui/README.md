@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS side project, I figure out that:
 
-* **AngularJS** is a faster approach for most use cases and you don't need rocket scientists or rock stars in your roster (team) to learn all the nuances of Backbone.
+* **AngularJS** is a faster approach for most use cases where you don't need rocket scientists or rock stars in your roster (team) to learn all the nuances of working with Backbone (e.g. child views).
 * Corporate support is a must for open source projects, giving my 2 cents to **HapiJS** because it has all features that you need, is stable, and most important, releases are frequent and contributors are a lot (and they don't jump ship to Golang)
 * **Jasmine 2.0 (Server side)**: Both Angular Protractor and Facebook Jest are based on Jasmine. Using Mocha/Chai combo just adds to your learning curve. Jasmine 2.0 has been given more updates that ever before.
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
