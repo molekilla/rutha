@@ -1,5 +1,5 @@
-# Rutha Stack #
-**R** Ule 
+# Rutha Stack - Taming HapiJS and AngularJS #
+**Ru** le 
 **T** hem 
 **H** apiJS 
 **A** ngularJS
