@@ -9,6 +9,10 @@
     "install": "node node_modules/protractor/bin/webdriver-manager update"
   },
   "author": "Rogelio Morrell",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/molekilla/rutha.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "concat": "~1.0.0",
@@ -42,8 +46,12 @@
     "uglifyjs": "~2.3.6"
   },
   "dependencies": {
-    "hapi": "~6.0.2",
-    "underscore": "^1.6.0",
-    "debug": "~1.0.4"
+    "bell": "^1.0.2",
+    "debug": "~1.0.4",
+    "hapi": "~6.4.0",
+    "hapi-auth-cookie": "^1.3.2",
+    "joi": "^4.6.2",
+    "rutha-utils": "^0.3.2",
+    "underscore": "^1.6.0"
   }
 }

@@ -6,6 +6,10 @@
 
 Pure pragmatic NodeJS stack
 
+For updates, read (changelog)[changelog.md]
+
+### Last update: 0.2.0
+
 ### Features ###
 
 After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS side project, I figure out that:

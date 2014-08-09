@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_service",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Rutha REST API Service",
   "main": "lib/hapi/index.js",
   "scripts": {
@@ -8,6 +8,10 @@
     "test": "grunt spec"
   },
   "author": "Rogelio Morrell",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/molekilla/rutha.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "grunt-contrib-jasmine": "~0.6.5",
@@ -26,9 +30,10 @@
   },
   "dependencies": {
     "debug": "~1.0.4",
-    "hapi": "~6.0.2",
+    "hapi": "~6.4.0",
     "joi": "~4.6.1",
     "lout": "^5.0.1",
+    "rutha-utils": "^0.3.2",
     "underscore": "~1.6.0"
   }
 }

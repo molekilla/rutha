@@ -1,0 +1,13 @@
+{
+  "apiServer": {
+    "host": "localhost",
+    "port": 3005
+  },
+  "mongodb": {
+    "connectionString": "mongodb://localhost/rutha"
+  },
+  "logger": {
+    "filename": "logs/dev.log",
+    "level": "silly"
+  }
+}
