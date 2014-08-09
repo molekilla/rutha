@@ -6,7 +6,7 @@
 
 Pure pragmatic NodeJS stack
 
-For updates, read (changelog)[changelog.md]
+For updates, read [changelog](changelog.md)
 
 ### Last update: 0.2.0
 
