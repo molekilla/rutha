@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 #### 0.2.0
 
-* Added (rutha-utils)[https://github.com/molekilla/rutha-utils], which are boilerplate wrappers for nconf, winston and mongoose
+* Added [rutha-utils](https://github.com/molekilla/rutha-utils), which are boilerplate wrappers for nconf, winston and mongoose
 * REST API versioning sample
 * REST API health check
 * How to use Mongoose loader
