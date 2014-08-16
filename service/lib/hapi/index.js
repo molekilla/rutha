@@ -1,8 +1,6 @@
 var Hapi = require('hapi');
 var debug = require('debug')('api:main');
 var RuthaUtils = require('rutha-utils');
-
-
 var config = RuthaUtils.createConfig({
   path: {
     config: __dirname + '/../../config'
@@ -21,15 +19,6 @@ var mongooseClient = RuthaUtils.createModels({
 
 // Create a server with a host and port
 var server = module.exports = Hapi.createServer(config.get('apiServer:host'), config.get('apiServer:port'));
-
-// health check
-server.route({
-  method: 'GET',
-  path: '/api/health',
-  handler: function(req, reply) {
-    reply('OK');
-  }
-});
 
 // Dependencies
 server.pack.app = {
@@ -54,6 +43,38 @@ var controllers = [
   }
 ];
 
+
+server.pack.register(require('hapi-auth-bearer-token'), function(err) {
+
+  server.auth.strategy('token', 'bearer-access-token', {
+      validateFunc: function(token, callback) {
+        // read from db or some place
+        var matched = false;
+        var tokenResult = { token: token };
+        var err = null;
+
+        if (token === 'a1b2c3') {
+          matched = true;
+        } else {
+          tokenResult = null;
+          err = { error: 'Unauthorized' };
+        }
+        return callback(err, matched, tokenResult);
+      }
+  });
+
+  // health check
+  server.route({
+    method: 'GET',
+    path: '/api/health',
+    config: {
+      handler: function(req, reply) {
+        reply('OK');
+      }
+    }
+  });
+
+
   server.pack.register(controllers,
    {
      route: {
@@ -66,4 +87,7 @@ var controllers = [
       });
     }
   });
+
+});
+
 

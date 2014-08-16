@@ -6,7 +6,10 @@ exports.register = function(plugin, options, next) {
   plugin.route({
     method: 'POST',
     path: '/v1/users',
-    handler: createHandler
+    handler: createHandler,
+    config: {
+    	auth: 'token'
+    }
   });
 
   next();

@@ -8,6 +8,9 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.2.1
+* Added hapi-auth-bearer-token to authenticate API. Use Bearer authentication for API calls.
+
 #### 0.2.0
 
 * Added [rutha-utils](https://github.com/molekilla/rutha-utils), which are boilerplate wrappers for nconf, winston and mongoose

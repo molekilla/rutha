@@ -8,7 +8,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.2.0
+### Last update: 0.2.1
 
 ### Features ###
 
