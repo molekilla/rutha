@@ -9,5 +9,10 @@
   "logger": {
     "filename": "logs/dev.log",
     "level": "silly"
+  },
+  "facebook": {
+    "clientId": "1",
+    "clientSecret": "1",
+    "callbackUrl": "http://localhost:3000/auth/facebook/callback"
   }
 }

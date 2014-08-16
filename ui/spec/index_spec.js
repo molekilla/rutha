@@ -2,11 +2,9 @@
 var Hapi = require('hapi');
 var server = require('./../lib/hapi');
 
-describe("A suite", function() {
-  it("contains spec with an expectation", function(done) {
-    //expect(true).toBe(true);
-    server.inject({ method: 'GET', url: '/' }, function (res) {
-    //      // code
+describe("Main controller", function() {
+  it("should return page for /", function(done) {
+    server.inject({ method: 'GET', url: '/', headers: { authorization: 'Bearer a1b2c3' } }, function (res) {
         expect(res.statusCode).toBe(200);
         done();
     });

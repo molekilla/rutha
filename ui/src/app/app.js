@@ -10,15 +10,25 @@ angular.module('rutha',
     RestangularProvider.setBaseUrl('/api');
 })
 .config(function($routeProvider) {
-    $routeProvider.
-      when('/overview', {
-        templateUrl: 'app/overview/overview.html',
-        controller: 'OverviewCtrl'
+// main/login
+// main/logout
+  $routeProvider.
+      when('/signup', {
+        templateUrl: 'app/main/signup.html',
+        controllerAs: 'signup',
+        controller: 'SignupCtrl'
+      }).
+      when('/login', {
+        templateUrl: 'app/main/login.html',
+        controllerAs: 'login',
+        controller: 'LoginCtrl'
       }).
       otherwise({
           controller : 'TestCtrl',
           controllerAs: 'main',
-          templateUrl: 'app/overview/index.html'
+          templateUrl: 'app/main/index.html'
       });
 });
+ 
+
  

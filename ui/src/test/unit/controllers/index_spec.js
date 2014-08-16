@@ -3,14 +3,14 @@
 describe('Index Controller Unit Test', function() {
   beforeEach(module('rutha.controllers'));
 
-  it ('should say for hello "Hejsan Angular!" ', inject(function($rootScope, $controller, $http) {
+  it ('should say for hello "Hejsan Rutha!" ', inject(function($rootScope, $controller, $http) {
     var $scope = $rootScope.$new();
 
     var ctrl = $controller('TestCtrl as main', {
       $scope: $scope
     });
 
-    expect($scope.main.hello).toBe('Hejsan Angular!');
+    expect($scope.main.hello).toBe('Hejsan Rutha!');
   }));
 
 });

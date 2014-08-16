@@ -12,6 +12,13 @@ var logger = RuthaUtils.createLogger({
   filename: config.get('logger:filename')
 });
 
+var mongooseClient = RuthaUtils.createModels({
+    client: 'mongoose',
+    connectionString: config.get('mongodb:connectionString'),
+    models: __dirname + '/../models'
+});
+
+
 var serverOptions = require('./server_options');
 
 // Create a server with a host and port
@@ -30,13 +37,22 @@ server.route({
 
 // Dependencies
 server.pack.app = {
+  mongoose: mongooseClient.client,
   config: config,
   logger: logger
 };
 
 debug('Set config, logger dependencies');
 
-// TODO: Add health check
+// health check
+server.route({
+  method: 'GET',
+  path: '/health',
+  handler: function(req, reply) {
+    reply('OK');
+  }
+});
+
 
 
 var controllers = [
@@ -45,7 +61,15 @@ var controllers = [
   }
 ];
 
-server.pack.register(require('hapi-auth-cookie'), function(err) {
+server.pack.register([require('hapi-auth-cookie'), require('bell')], function(err) {
+
+  server.auth.strategy('facebook', 'bell', {
+      provider: 'facebook',
+      password: 'some password',
+      clientId: config.get('facebook:clientId'),
+      clientSecret: config.get('facebook:clientSecret'),
+      isSecure: false     // Only used for dev env
+  });
 
   server.auth.strategy('session', 'cookie', {
       password: 'some password',

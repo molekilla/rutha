@@ -8,7 +8,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.2.1
+### Last update: 0.2.2
 
 ### Features ###
 
@@ -28,12 +28,15 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
 * **Lout module** for [API docs](https://github.com/spumko/lout) by default
+* NEW! [Chris Sevilleja's 'Easy Node authentication' local and facebook sample code for HapiJS](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)
+
 
 ### Installing ###
 1. Clone repo
 2. Rename text containing `rutha` to `your_app_name`
 3. `npm install`
 4. `bower install`
+5. (Optional) `npm install grunt-cli -g`
 
 ### Grunt Help (Service) ###
 
