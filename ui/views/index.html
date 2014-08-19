@@ -13,6 +13,7 @@
     <meta name="description" content="Plain HTML template">
     <meta name="author" content="Rutha">
     <link rel="stylesheet" href="../dist/components/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../dist/app.min.css">
     <!-- bower:js -->
     <script src="../dist/components/jquery/dist/jquery.js"></script>
     <script src="../dist/components/angular/angular.js"></script>
@@ -28,8 +29,47 @@
     <script src="../dist/templates.js"></script>
     </head>
     <body>
-      Hello Hapi !! Es hora de codigo !
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Rutha Stack</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#signup">Signup</a></li>
+            <li><a href="#login">Login</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Hello Hejsan Hola Rutha!</h1>
+      </div>
+      <p class="lead">Hello HapiJS, meet AngularJS !!!</p>
+            
       <div ng-view>
       </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">Rutha / MIT Licensed.</p>
+      </div>
+    </div>
+          <script type='text/javascript'>//<![CDATA[
+document.write("<script async src='//HOST:3000/browser-sync-client.1.3.5.js'><\/script>".replace(/HOST/g, location.hostname));
+//]]></script>
     </body>
     </html>

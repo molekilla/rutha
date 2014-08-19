@@ -4,10 +4,10 @@ module.exports = {
       src: ['lib/**/*.js', 'dist/**/*.js', 'src/**/*.js', 'views/**/*.html']
     },
     options: {
-      ghostMode: false,
       debugInfo: true,
-      //host: 'localhost',
-      proxy: 'localhost:3005',
+      reloadDelay: 900,
+      //host: true
+      proxy: 'localhost:3005'
     }
   }
-}
+};

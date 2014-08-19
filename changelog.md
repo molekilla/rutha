@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.2.3
+* Fixed BrowserSync issue.
+* Added cssmin
+* Better start page design
+
 #### 0.2.2
 * Added Hapi Local and FB OAuth authentication sample code. Based from [Scotch.io / Chris Sevilleja](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local) and  [EmptyMind](http://emptymind.me/user-authentication-with-hapi-hapi-auth-cookie-and-mongoose/)
 

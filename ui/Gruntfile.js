@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     grunt.registerTask('spec', ['jshint', 'jasmine_node', 'karma:unit']);
 
     // builds deployment assets
-    grunt.registerTask('build', ['ngtemplates:build', 'concat:dev', 'ngAnnotate', 'uglify:build', 'wiredep']);
+    grunt.registerTask('build', ['ngtemplates:build', 'concat:dev', 'ngAnnotate', 'uglify:build', 'cssmin', 'wiredep']);
 
     // runs functional tests
     grunt.registerTask('test', ['concurrent:test']);

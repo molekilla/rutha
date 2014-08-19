@@ -12,6 +12,7 @@ angular.module('rutha',
 .config(function($routeProvider) {
 // main/login
 // main/logout
+
   $routeProvider.
       when('/signup', {
         templateUrl: 'app/main/signup.html',
