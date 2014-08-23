@@ -6,7 +6,8 @@ module.exports = {
           }
         },
         compileMode: 'sync',
-        path: './views'
+        path: './views',
+        partialsPath: './views/partials'
     }
 };
 

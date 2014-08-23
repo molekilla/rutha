@@ -5,8 +5,14 @@ module.exports = {
       logConcurrentOutput: true
     }
   },
-  dev: {
+  auto: {
     tasks: ['nodemon', 'node-inspector', 'browserSync', 'watch'],
+    options: {
+      logConcurrentOutput: true
+    }
+  },
+  dev: {
+    tasks: ['nodemon', 'node-inspector', 'watch'],
     options: {
       logConcurrentOutput: true
     }

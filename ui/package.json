@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Rutha Front End",
   "main": "lib/hapi/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "grunt-karma": "^0.8.3",
     "grunt-ng-annotate": "~0.2.3",
     "grunt-node-inspector": "~0.1.5",
-    "grunt-nodemon": "~0.2.1",
+    "grunt-nodemon": "~0.3.0",
     "grunt-protractor-runner": "^1.1.0",
     "grunt-wiredep": "~1.8.0",
     "jasmine-node": "~2.0.0",
@@ -44,7 +44,8 @@
     "protractor": "^1.0.0",
     "time-grunt": "~0.4.0",
     "uglifyjs": "~2.3.6",
-    "grunt-contrib-cssmin": "~0.10.0"
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-nsp-package": "0.0.5"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

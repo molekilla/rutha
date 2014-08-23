@@ -8,7 +8,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.2.3
+### Last update: 0.2.4
 
 ### Features ###
 
@@ -29,7 +29,8 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
 * **Lout module** for [API docs](https://github.com/spumko/lout) by default
 * [Chris Sevilleja's 'Easy Node authentication' local and facebook sample code for HapiJS](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)
-* New! cssmin task
+* Basic cssmin task
+* **New!** `grunt-nsp-package` support 
 
 
 ### Installing ###
@@ -47,11 +48,13 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 
 ### Grunt Help (Frontend) ###
 
-* `grunt serve`: Serves frontend service
+* `grunt serve`: Serves frontend service with no auto reload
+* `grunt autosync`: Serves frontend service with auto reload
 * `grunt spec`: Runs jshint and server side / UI specs
 * `grunt test`: Runs E2E/Functional tests (Angular)
 * `grunt build`: Prepares UI assets
 * `grunt jshinting`: Verifies javascript using jshint
+* `grunt auditpkg`: Verifies modules that contained security issues
 
 ###  About Angular Tests
 `ui/src/test/lib` contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)

@@ -5,7 +5,7 @@ module.exports = {
     },
     options: {
       debugInfo: true,
-      reloadDelay: 900,
+      reloadDelay: 150,
       //host: true
       proxy: 'localhost:3005'
     }

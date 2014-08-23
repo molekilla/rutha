@@ -5,7 +5,7 @@
 <html lang="es" ng-app="rutha">
 <!--<![endif]-->
 <head>
-    <title><%= title %></title>
+    <title><%- title %></title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,7 @@
     <meta name="description" content="Plain HTML template">
     <meta name="author" content="Rutha">
     <link rel="stylesheet" href="../dist/components/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../dist/app.min.css">
     <!-- bower:js -->
     <script src="../dist/components/jquery/dist/jquery.js"></script>
     <script src="../dist/components/angular/angular.js"></script>
@@ -28,7 +29,25 @@
     <script src="../dist/templates.js"></script>
     </head>
     <body>
-      Profile Secure Page
+
+            <!-- Fixed navbar -->
+    <%= navbar %>
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Hello Hejsan Hola Rutha!</h1>
+      </div>
+      <p class="lead">Secure page</p>
+            
+      <div ng-view>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">Rutha / MIT Licensed / Made in Panama.</p>
+      </div>
+    </div>
 
           <script type='text/javascript'>//<![CDATA[
 document.write("<script async src='//HOST:3000/browser-sync-client.1.3.5.js'><\/script>".replace(/HOST/g, location.hostname));

@@ -8,6 +8,15 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.2.4
+* Separated BrowserSync task due to some nodemon - hapi restart issues. Use `grunt autosync` to live sync.
+* Added update to wiredep sync, it will detect any HTML file under views folder.
+* Added 900 ms delay to nodemon to fix `grunt autosync` and `grunt serve`.
+* Added `grunt auditpkg` to run `grunt-nsp-package` security checks.
+* Added missing MIT license
+* Added Hapi Partials code sample
+* Added Made in Panama
+
 #### 0.2.3
 * Fixed BrowserSync issue.
 * Added cssmin

@@ -6,32 +6,15 @@
 
 Pure pragmatic NodeJS stack
 
-### Features ###
-
-After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS side project, I figure out that:
-
-* **AngularJS** is a faster approach for most use cases where you don't need rocket scientists or rock stars in your roster (team) to learn all the nuances of working with Backbone (e.g. child views).
-* Corporate support is a must for open source projects, giving my 2 cents to **HapiJS** because it has all features that you need, is stable, and most important, releases are frequent and contributors are a lot (and they don't jump ship to Golang)
-* **Jasmine 2.0 (Server side)**: Both Angular Protractor and Facebook Jest are based on Jasmine. Using Mocha/Chai combo just adds to your learning curve. Jasmine 2.0 has been given more updates than ever before. Is a must have.
-* **Grunt JIT**: Is JIT for Grunt. No more waits.
-* **BrowserSync**: Choose this because it was painless to configure
-* **Underscore for frontend server side templates**: To avoid issues with AngularJS.
-* [Grunt ngAnnotate](https://github.com/mzgol/grunt-ng-annotate)
-* [Grunt Angular Templates](https://github.com/ericclemmons/grunt-angular-templates)
-* [Grunt  Wiredep](https://github.com/stephenplusplus/grunt-wiredep)
-* **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
-* **Specs and Functional Tests (Frontend)**: Based partially on [year of moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html) 
-* **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
-* **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
-* **Lout module** for [API docs](https://github.com/spumko/lout) by default
-
 ### Grunt Help (Frontend) ###
 
-* `grunt serve`: Serves frontend service
+* `grunt serve`: Serves frontend service with no auto reload
+* `grunt autosync`: Serves frontend service with auto reload
 * `grunt spec`: Runs jshint and server side / UI specs
 * `grunt test`: Runs E2E/Functional tests (Angular)
 * `grunt build`: Prepares UI assets
 * `grunt jshinting`: Verifies javascript using jshint
+* `grunt auditpkg`: Verifies modules that contained security issues
 
 ###  About Angular Tests
 `ui/src/test/lib` contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)
