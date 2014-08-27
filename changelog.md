@@ -8,6 +8,10 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.2.5
+* Bumped to Underscore 1.7.0 and Hapi 6.6.0, plus others (e.g. HapiJS Bell)
+* Changed Underscore server side template compiler to support Underscore 1.7.0
+
 #### 0.2.4
 * Separated BrowserSync task due to some nodemon - hapi restart issues. Use `grunt autosync` to live sync.
 * Added update to wiredep sync, it will detect any HTML file under views folder.
