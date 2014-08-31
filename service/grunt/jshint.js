@@ -6,6 +6,7 @@
         src: ['lib/**/*.js', 'spec/**/*.js', 'index.js']
       },
       options: {
+        reporter: require('jshint-stylish'),
         devel: true,
         curly: true,
         strict: false,

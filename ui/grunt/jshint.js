@@ -6,6 +6,7 @@
         src: ['src/app/**/*.js', 'src/test/e2e/**/*.js', 'src/test/unit/**/*.js', 'lib/**/*.js', 'spec/**/*.js']
       },
       options: {
+        reporter: require('jshint-stylish'),
         devel: true,
         curly: true,
         strict: false,

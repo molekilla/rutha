@@ -1,0 +1,17 @@
+{
+  "name": "rutha_stack",
+  "version": "0.3.0",
+  "description": "Rutha Dev Stack",
+  "scripts": {
+    "install": "node node_modules/protractor/bin/webdriver-manager update",
+    "test": "grunt spec --gruntfile ui/Gruntfile.js && grunt spec --gruntfile service/Gruntfile.js"
+  },
+  "author": "Rogelio Morrell",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/molekilla/rutha.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+  }
+}

@@ -7,7 +7,7 @@ describe("Requests", function() {
 
   it ('should load', function() {
     browser.get('#/');
-    expect(element(by.css('.ng-binding')).getText()).toContain('Hejsan');
+    expect(element(by.css('.lead')).getText()).toContain('Hello HapiJS, meet AngularJS !!!');
   });
 
 });

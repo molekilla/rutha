@@ -1,0 +1,9 @@
+# Directories
+.grunt/
+node_modules/
+logs/
+dist/
+
+# Files
+# test.pdf
+# test.txt

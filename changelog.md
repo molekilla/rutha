@@ -8,6 +8,13 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.3.0
+
+* Fixed Travis CI config
+* Fixed E2E tests
+* Added package.json to root
+* Added `jshint-stylish` reporter to JSHint config
+
 #### 0.2.5
 * Bumped to Underscore 1.7.0 and Hapi 6.6.0, plus others (e.g. HapiJS Bell)
 * Changed Underscore server side template compiler to support Underscore 1.7.0
