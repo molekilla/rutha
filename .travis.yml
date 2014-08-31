@@ -3,12 +3,11 @@ node_js:
   - "0.10"
 env:
   global:
-    - UI=/ui
-    - API=/service
+    - UI=ui
+    - API=service
 before_install:
   - npm config set spin false
   - npm install -g grunt-cli
-  - ls
 install:
   - cd $UI
   - npm install
