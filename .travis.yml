@@ -6,7 +6,7 @@ before_install:
   - npm config set spin false
   - npm install -g grunt-cli
 install:
-  - cd /ui
+  - `cd`/ui
   - npm install
   - cd ..
   - cd /service
