@@ -8,6 +8,7 @@ env:
 before_install:
   - npm config set spin false
   - npm install -g grunt-cli
+  - ls
 install:
   - cd $UI
   - npm install
