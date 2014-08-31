@@ -4,7 +4,7 @@ node_js:
   - "0.10"
 before_script:
   - npm config set spin false
-  - npm install -g grunt-cli
+  - npm install grunt-cli
 script:
   - grunt spec --gruntfile ui/Gruntfile.js
   - grunt spec --gruntfile service/Gruntfile.js
