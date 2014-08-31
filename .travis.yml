@@ -1,15 +1,18 @@
 language: node_js
 node_js:
-  - "0.11"
   - "0.10"
+env:
+  global:
+    - UI=/ui
+    - API=/service
 before_install:
   - npm config set spin false
   - npm install -g grunt-cli
 install:
-  - `cd`/ui
+  - cd $UI
   - npm install
   - cd ..
-  - cd /service
+  - cd $API
   - npm install
 before_script:
   - grunt spec --gruntfile ui/Gruntfile.js
