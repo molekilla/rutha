@@ -4,6 +4,8 @@
 **H** apiJS 
 **A** ngularJS
 
+[![Build Status](https://travis-ci.org/molekilla/rutha.svg?branch=master)](https://travis-ci.org/molekilla/rutha)
+
 Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
