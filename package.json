@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "description": "Rutha Dev Stack",
   "scripts": {
-    "install": "node node_modules/protractor/bin/webdriver-manager update",
     "test": "grunt spec --gruntfile ui/Gruntfile.js && grunt spec --gruntfile service/Gruntfile.js"
   },
   "author": "Rogelio Morrell",
