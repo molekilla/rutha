@@ -12,7 +12,6 @@ module.exports = function(grunt) {
             ngAnnotate: 'grunt-ng-annotate',
             ngtemplates: 'grunt-angular-templates',
             'validate-package': 'grunt-nsp-package'
-
         }
     });
 

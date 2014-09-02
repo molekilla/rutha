@@ -8,6 +8,12 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.4.0
+
+* Added Istanbul code coverage to API / Service.
+* Bumped HapiJS to 6.7.1
+* Added `grunt auditpkg` to run `grunt-nsp-package` security checks to API / Service.
+
 #### 0.3.0
 
 * Fixed Travis CI config

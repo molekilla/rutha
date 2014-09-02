@@ -7,12 +7,21 @@ module.exports = function(grunt) {
         data: { //data passed into config.  Can use with <%= test %>
             test: false
         },
-        jitGrunt: true
+        jitGrunt: {
+            instrument: 'grunt-istanbul',
+            storeCoverage: 'grunt-istanbul',
+            makeReport: 'grunt-istanbul',
+            'validate-package': 'grunt-nsp-package'
+        }
     });
 
     // Default task.
     //grunt.registerTask('test', ['mochaTest']);
     grunt.registerTask('serve', ['concurrent']);
-    grunt.registerTask('spec', ['jshint', 'jasmine_node']);
-
+    grunt.registerTask('spec', ['jshint', 'jasmine_node:dev']);
+    grunt.registerTask('coverage', ['jshint', 'clean:coverage', 'env:coverage',
+        'instrument', 'jasmine_node:coverage', 'storeCoverage', 'makeReport']);
+    
+    // verifies security
+    grunt.registerTask('auditpkg', ['validate-package']);
 };

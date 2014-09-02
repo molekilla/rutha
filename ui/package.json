@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Rutha Front End",
   "main": "lib/hapi/index.js",
   "scripts": {
@@ -52,7 +52,7 @@
     "bcrypt-nodejs": "0.0.3",
     "bell": "^1.1.0",
     "debug": "~1.0.4",
-    "hapi": "~6.6.0",
+    "hapi": "~6.7.1",
     "hapi-auth-cookie": "^1.3.2",
     "joi": "^4.6.2",
     "rutha-utils": "^0.3.3",

@@ -1,16 +1,22 @@
 module.exports = {
-  options: {
-    forceExit: true,
-    match: '.',
-    matchall: false,
-    extensions: 'js',
-    specNameMatcher: 'spec',
-    // jUnit: {
-    //   report: true,
-    //   savePath : "./build/reports/jasmine/",
-    //   useDotNotation: true,
-    //   consolidate: true
-    // }
+  dev: {
+    options: {
+      specFolders: ['spec/'],
+      forceExit: true,
+      match: '.',
+      matchall: false,
+      extensions: 'js',
+      specNameMatcher: 'spec'
+    }
   },
-  all: ['spec/']
+  coverage: {
+    options: {
+      specFolders: ['test/coverage/'],
+      forceExit: true,
+      match: '.',
+      matchall: false,
+      extensions: 'js',
+      specNameMatcher: '*'
+    }
+  }
 };
