@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.4.1
+
+* Separated rutha service grunt tasks into `rutha-grunt-tasks-service`. This allows existing projects to get the latest and greatest dev stack updates.
+* Bumped dev dependencies (jit-grunt, load-grunt-config)
+
 #### 0.4.0
 
 * Added Istanbul code coverage to API / Service.

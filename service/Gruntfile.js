@@ -1,11 +1,19 @@
 module.exports = function(grunt) {
     var path = require('path');
+    var ruthaGruntModules = path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-service/node_modules');
     require('time-grunt')(grunt);
     require('load-grunt-config')(grunt, {
-        configPath: path.join(process.cwd(), 'grunt'), //path to task.js files, defaults to grunt dir
+        configPath: path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-service/grunt'), //path to task.js files, defaults to grunt dir
         init: true, //auto grunt.initConfig
         data: { //data passed into config.  Can use with <%= test %>
-            test: false
+            nodeInspector: {
+                webPort: 8081,
+                debugPort: 5858
+            },
+            nodemon: {
+                args: ['--debug']
+            },
+            cwd: process.cwd()
         },
         jitGrunt: {
             instrument: 'grunt-istanbul',
@@ -16,7 +24,6 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    //grunt.registerTask('test', ['mochaTest']);
     grunt.registerTask('serve', ['concurrent']);
     grunt.registerTask('spec', ['jshint', 'jasmine_node:dev']);
     grunt.registerTask('coverage', ['jshint', 'clean:coverage', 'env:coverage',

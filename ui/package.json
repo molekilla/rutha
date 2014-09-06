@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Rutha Front End",
   "main": "lib/hapi/index.js",
   "scripts": {

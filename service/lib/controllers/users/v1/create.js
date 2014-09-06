@@ -4,6 +4,7 @@ var debug = require('debug')('users:list');
 module.exports = function(request, reply) {
     var pack = request.server.pack;
     var UserModel = pack.app.mongoose.models.User;
+    
     UserModel.create({
       email: 'rutha@addme.com'
     }, function(err, model) {

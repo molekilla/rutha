@@ -29,10 +29,9 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 
 * `grunt serve`: Serves API service
 * `grunt spec`: Runs Jasmine 2.0 specs
+* `grunt coverage`: Runs Istanbul code coverage. Outputs HTML reports to `test/coverage/reports`
+* `grunt auditpkg`: Verifies modules that contains security issues
 
-
-###  About Angular Tests
-`ui/src/test/lib` contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)
 
 ### Nginx routes (Optional) ###
 
