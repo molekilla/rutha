@@ -1,7 +1,8 @@
 {
   "apiServer": {
     "host": "localhost",
-    "port": 3005
+    "port": 3005,
+    "cannedPort": 9002
   },
   "mongodb": {
     "connectionString": "mongodb://localhost/rutha"
