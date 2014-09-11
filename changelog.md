@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.4.2
+
+* Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
+* Bumped AngularJS and HapiJS
+
 #### 0.4.1
 
 * Separated rutha service grunt tasks into `rutha-grunt-tasks-service`. This allows existing projects to get the latest and greatest dev stack updates.

@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.4.1
+### Last update: 0.4.2
 
 ### Features ###
 
@@ -33,7 +33,8 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * [Chris Sevilleja's 'Easy Node authentication' local and facebook sample code for HapiJS](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)
 * Basic cssmin task
 * `grunt-nsp-package` support
-* [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/) 
+* [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/)
+* Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
 
 
 ### Installing ###
