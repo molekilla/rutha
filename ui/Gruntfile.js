@@ -2,10 +2,20 @@ module.exports = function(grunt) {
     var path = require('path');
     require('time-grunt')(grunt);
     require('load-grunt-config')(grunt, {
-        configPath: path.join(process.cwd(), 'grunt'), //path to task.js files, defaults to grunt dir
+        configPath: path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-ui/grunt'), //path to task.js files, defaults to grunt dir
         init: true, //auto grunt.initConfig
         data: { //data passed into config.  Can use with <%= test %>
-            test: false
+            nodeInspector: {
+                webPort: 8082,
+                debugPort: 5859
+            },
+            nodemon: {
+                args: ['--debug']
+            },
+            ngTemplates: {
+                moduleNamespace: 'rutha.templates'
+            },
+            cwd: process.cwd()
         },
         jitGrunt: {
             protractor: 'grunt-protractor-runner',
