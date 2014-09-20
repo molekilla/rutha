@@ -15,6 +15,12 @@ module.exports = function(grunt) {
             ngTemplates: {
                 moduleNamespace: 'rutha.templates'
             },
+            wiredepConfig: {
+                src: ['views/**/*.html'],
+                options: {
+                    cwd: process.cwd()
+                }
+            },
             cwd: process.cwd()
         },
         jitGrunt: {
