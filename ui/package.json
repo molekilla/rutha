@@ -47,7 +47,7 @@
     "protractor": "^1.0.0",
     "time-grunt": "~0.4.0",
     "uglifyjs": "~2.3.6",
-    "rutha-grunt-tasks-ui": "~0.1.2"
+    "rutha-grunt-tasks-ui": "~0.1.4"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
