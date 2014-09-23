@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_service",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Rutha REST API Service",
   "main": "lib/hapi/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "jit-grunt": "~0.8.0",
     "load-grunt-config": "~0.13.1",
     "time-grunt": "~0.4.0",
-    "rutha-grunt-tasks-service": "~0.1.0"
+    "rutha-grunt-tasks-service": "~0.1.3"
   },
   "dependencies": {
     "debug": "~1.0.4",

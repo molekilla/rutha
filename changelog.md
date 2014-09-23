@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.4.3
+
+* Separated rutha UI grunt tasks into `rutha-grunt-tasks-ui`. This allows existing projects to get the latest and greatest dev stack updates.
+* Set `grunt-nodemon` to 0.2.1 as latest has issues
+
 #### 0.4.2
 
 * Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
