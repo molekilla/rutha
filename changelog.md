@@ -8,6 +8,15 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.4.4
+
+* Bump some dependencies
+* Contains tasks help description
+* Contains autowiring for karma.conf, based from https://github.com/yeoman/generator-angular/issues/856
+* Contains ngTemplates support for specs (karma)
+* Contains the initial build release workflow
+* Moved registered tasks to https://github.com/molekilla/rutha-grunt-tasks-ui
+
 #### 0.4.3
 
 * Separated rutha UI grunt tasks into `rutha-grunt-tasks-ui`. This allows existing projects to get the latest and greatest dev stack updates.
