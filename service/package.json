@@ -33,9 +33,9 @@
   },
   "dependencies": {
     "debug": "~1.0.4",
-    "hapi": "~6.8.1",
+    "hapi": "~6.9.0",
     "hapi-auth-bearer-token": "^1.1.3",
-    "joi": "~4.6.1",
+    "joi": "~4.7.0",
     "lout": "^5.0.2",
     "rutha-utils": "^0.3.3",
     "underscore": "~1.7.0"
