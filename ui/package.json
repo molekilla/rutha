@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Rutha Front End",
   "main": "lib/hapi/index.js",
   "scripts": {
@@ -27,8 +27,8 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-jasmine-node": "~0.2.1",
-    "grunt-karma": "^0.8.3",
-    "grunt-ng-annotate": "~0.2.3",
+    "grunt-karma": "^0.9.0",
+    "grunt-ng-annotate": "~0.4.0",
     "grunt-node-inspector": "~0.1.5",
     "grunt-nodemon": "~0.2.1",
     "grunt-nsp-package": "0.0.5",
@@ -45,17 +45,17 @@
     "load-grunt-config": "~0.11.0",
     "ng-annotate": "~0.9.7",
     "protractor": "^1.0.0",
+    "rutha-grunt-tasks-ui": "^0.1.6",
     "time-grunt": "~0.4.0",
-    "uglifyjs": "~2.3.6",
-    "rutha-grunt-tasks-ui": "~0.1.4"
+    "uglifyjs": "~2.3.6"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bell": "^1.1.0",
     "debug": "~1.0.4",
-    "hapi": "~6.8.1",
+    "hapi": "~6.9.0",
     "hapi-auth-cookie": "^1.3.2",
-    "joi": "^4.6.2",
+    "joi": "^4.7.0",
     "rutha-utils": "^0.3.3",
     "underscore": "^1.7.0"
   }
