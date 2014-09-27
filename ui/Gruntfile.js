@@ -21,7 +21,8 @@ module.exports = function(grunt) {
                     cwd: process.cwd()
                 }
             },
-            cwd: process.cwd()
+            cwd: process.cwd(),
+            pkg: grunt.file.readJSON('package.json')
         },
         jitGrunt: {
             protractor: 'grunt-protractor-runner',
@@ -32,16 +33,16 @@ module.exports = function(grunt) {
     });
 
     // server dev environment with browsersync
-    grunt.registerTask('autosync', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep:dev', 'concurrent:auto']);
+    grunt.registerTask('autosync', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate:dev', 'uglify:dev', 'wiredep:dev', 'concurrent:auto']);
     
     // server dev environment no auto refresh
-    grunt.registerTask('serve', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep:dev', 'concurrent:dev']);
+    grunt.registerTask('serve', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate:dev', 'uglify:dev', 'wiredep:dev', 'concurrent:dev']);
       
     // runs server side specs and UI specs
     grunt.registerTask('spec', ['jshint', 'jasmine_node', 'ngtemplates:specs', 'wiredep:test', 'karma:unit']);
 
     // builds deployment assets
-    grunt.registerTask('build', ['ngtemplates:build', 'concat:dev', 'ngAnnotate', 'uglify:build', 'cssmin', 'wiredep:dev']);
+    grunt.registerTask('build', ['ngtemplates:build', 'concat:build', 'ngAnnotate:build', 'uglify:build', 'cssmin:build']);
 
     // runs functional tests
     grunt.registerTask('test', ['concurrent:test']);

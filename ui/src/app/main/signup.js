@@ -1,4 +1,4 @@
 angular.module('rutha.controllers')
-.controller('SignupCtrl', function($scope) {
-    // TODO: Add code
+.controller('SignupCtrl', function($scope, $log) {
+    $log.info('Signup controller');
 });
