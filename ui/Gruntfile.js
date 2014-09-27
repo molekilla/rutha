@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     grunt.registerTask('serve', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep:dev', 'concurrent:dev']);
       
     // runs server side specs and UI specs
-    grunt.registerTask('spec', ['jshint', 'jasmine_node', 'wiredep:test', 'karma:unit']);
+    grunt.registerTask('spec', ['jshint', 'jasmine_node', 'ngtemplates:specs', 'wiredep:test', 'karma:unit']);
 
     // builds deployment assets
     grunt.registerTask('build', ['ngtemplates:build', 'concat:dev', 'ngAnnotate', 'uglify:build', 'cssmin', 'wiredep:dev']);
