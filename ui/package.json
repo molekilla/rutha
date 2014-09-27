@@ -45,9 +45,9 @@
     "load-grunt-config": "~0.11.0",
     "ng-annotate": "~0.9.7",
     "protractor": "^1.0.0",
+    "rutha-grunt-tasks-ui": "^0.1.4",
     "time-grunt": "~0.4.0",
-    "uglifyjs": "~2.3.6",
-    "rutha-grunt-tasks-ui": "~0.1.4"
+    "uglifyjs": "~2.3.6"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

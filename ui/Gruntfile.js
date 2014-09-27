@@ -32,16 +32,16 @@ module.exports = function(grunt) {
     });
 
     // server dev environment with browsersync
-    grunt.registerTask('autosync', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep', 'concurrent:auto']);
+    grunt.registerTask('autosync', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep:dev', 'concurrent:auto']);
     
     // server dev environment no auto refresh
-    grunt.registerTask('serve', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep', 'concurrent:dev']);
+    grunt.registerTask('serve', ['ngtemplates:dev', 'concat:dev', 'ngAnnotate', 'uglify:dev', 'wiredep:dev', 'concurrent:dev']);
       
     // runs server side specs and UI specs
-    grunt.registerTask('spec', ['jshint', 'jasmine_node', 'karma:unit']);
+    grunt.registerTask('spec', ['jshint', 'jasmine_node', 'wiredep:test', 'karma:unit']);
 
     // builds deployment assets
-    grunt.registerTask('build', ['ngtemplates:build', 'concat:dev', 'ngAnnotate', 'uglify:build', 'cssmin', 'wiredep']);
+    grunt.registerTask('build', ['ngtemplates:build', 'concat:dev', 'ngAnnotate', 'uglify:build', 'cssmin', 'wiredep:dev']);
 
     // runs functional tests
     grunt.registerTask('test', ['concurrent:test']);
