@@ -9,7 +9,7 @@ Pure pragmatic NodeJS stack
 ### Changelog ###
 
 #### 0.4.4
-
+* Added KendoUI (https://github.com/molekilla/rutha/pull/15)
 * Bump some dependencies
 * Contains tasks help description
 * Contains autowiring for karma.conf, based from https://github.com/yeoman/generator-angular/issues/856
