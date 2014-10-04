@@ -8,6 +8,13 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.4.5
+
+* Bump some dependencies.
+* Contains service tasks help description.
+* Moved registered tasks to https://github.com/molekilla/rutha-grunt-tasks-service.
+* Uses `mongo-migrate` and `rutha-grunt-mongo-migrations` (adds grunt tasks) for MongoDB data migrations.
+
 #### 0.4.4
 
 * Bump some dependencies

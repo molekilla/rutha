@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.4.4
+### Last update: 0.4.5
 
 ### Features ###
 
@@ -50,6 +50,9 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * `grunt spec`: Runs Jasmine 2.0 specs
 * `grunt coverage`: Runs Istanbul code coverage. Outputs HTML reports to `test/coverage/reports`
 * `grunt auditpkg`: Verifies modules that contains security issues
+* `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
+* `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)
+* `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
 
 ### Grunt Help (Frontend) ###
 

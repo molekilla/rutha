@@ -1,9 +1,12 @@
 module.exports = function(grunt) {
     var path = require('path');
-    var ruthaGruntModules = path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-service/node_modules');
+    var RuthaMigrations = require('rutha-grunt-mongo-migrations')(grunt);
+    var RuthaGruntService = require('rutha-grunt-tasks-service')(grunt);
+
     require('time-grunt')(grunt);
     require('load-grunt-config')(grunt, {
         configPath: path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-service/grunt'), //path to task.js files, defaults to grunt dir
+        overridePath: path.join(process.cwd(), 'node_modules/rutha-grunt-mongo-migrations/grunt'),
         init: true, //auto grunt.initConfig
         data: { //data passed into config.  Can use with <%= test %>
             nodeInspector: {
@@ -12,6 +15,9 @@ module.exports = function(grunt) {
             },
             nodemon: {
                 args: ['--debug']
+            },
+            migrations: {
+                config: 'migrationOptions.json'
             },
             cwd: process.cwd()
         },
@@ -23,12 +29,7 @@ module.exports = function(grunt) {
         }
     });
 
-    // Default task.
-    grunt.registerTask('serve', ['concurrent']);
-    grunt.registerTask('spec', ['jshint', 'jasmine_node:dev']);
-    grunt.registerTask('coverage', ['jshint', 'clean:coverage', 'env:coverage',
-        'instrument', 'jasmine_node:coverage', 'storeCoverage', 'makeReport']);
-    
-    // verifies security
-    grunt.registerTask('auditpkg', ['validate-package']);
+
+    RuthaGruntService.registerTasks();
+    RuthaMigrations.registerTasks();
 };
