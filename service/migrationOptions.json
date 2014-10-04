@@ -1,0 +1,7 @@
+{
+  "mongo": {
+    "host": "localhost",
+    "db": "rutha",
+    "port": "27017"
+  }
+}
