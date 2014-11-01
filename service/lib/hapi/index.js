@@ -57,7 +57,7 @@ server.pack.register(require('hapi-auth-bearer-token'), function(err) {
           matched = true;
         } else {
           tokenResult = null;
-          err = { error: 'Unauthorized' };
+          err = new Error('Unauthorized');
         }
         return callback(err, matched, tokenResult);
       }
