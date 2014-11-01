@@ -45,7 +45,7 @@
     "load-grunt-config": "~0.11.0",
     "ng-annotate": "~0.9.7",
     "protractor": "^1.0.0",
-    "rutha-grunt-tasks-ui": "^0.1.7",
+    "rutha-grunt-tasks-ui": "^0.1.8",
     "time-grunt": "~0.4.0",
     "uglifyjs": "~2.3.6"
   },
