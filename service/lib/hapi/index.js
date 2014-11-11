@@ -1,28 +1,33 @@
 var Hapi = require('hapi');
 var debug = require('debug')('api:main');
 var RuthaUtils = require('rutha-utils');
+var MongooseHandler = require('rutha-utils/mongoose');
+var Mongoose = require('mongoose');
+
 var config = RuthaUtils.createConfig({
   path: {
     config: __dirname + '/../../config'
   }
-});
+}).load();
 
 var logger = RuthaUtils.createLogger({
   filename: config.get('logger:filename')
 });
 
-var mongooseClient = RuthaUtils.createModels({
-    client: 'mongoose',
-    connectionString: config.get('mongodb:connectionString'),
-    models: __dirname + '/../models'
+var client = Mongoose.connect(config.get('mongodb:connectionString'));
+MongooseHandler.bindEvents(client);
+MongooseHandler.bindModels({
+    mongoose: client,
+    modelsPath: __dirname + '/../models'
 });
+
 
 // Create a server with a host and port
 var server = module.exports = Hapi.createServer(config.get('apiServer:host'), config.get('apiServer:port'));
 
 // Dependencies
 server.pack.app = {
-  mongoose: mongooseClient.client,
+  mongoose: client,
   config: config,
   logger: logger
 };

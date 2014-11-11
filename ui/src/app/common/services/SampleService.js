@@ -6,5 +6,5 @@ function SomeService () {
   };
 }
 angular
-  .module('rutha.services')
+  .module('ruthaServices')
   .service('SomeService', SomeService);

@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.4.6
+### Last update: 0.5.0
 
 ### Features ###
 
@@ -35,7 +35,7 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * `grunt-nsp-package` support
 * [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/)
 * Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
-
+* [Angular Hint](https://github.com/angular/angular-hint)
 
 ### Installing ###
 1. Clone repo

@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "description": "Rutha Dev Stack",
   "scripts": {
     "test": "grunt spec --gruntfile ui/Gruntfile.js && grunt spec --gruntfile service/Gruntfile.js"
