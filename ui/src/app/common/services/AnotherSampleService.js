@@ -13,5 +13,5 @@ function AnotherService () {
   return _AnotherService;
 }
 angular
-  .module('rutha.services')
+  .module('ruthaServices')
   .factory('AnotherService', AnotherService);

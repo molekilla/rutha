@@ -1,16 +1,17 @@
 {
   "name": "Rutha",
   "dependencies": {
-    "angular": "~1.3.0-rc.0",
-    "angular-sanitize": "~1.3.0-rc.0",
-    "angular-messages": "~1.3.0-rc.0",
-    "angular-route": "~1.3.0-rc.0",
+    "angular": "~1.3.2",
+    "angular-sanitize": "~1.3.2",
+    "angular-messages": "~1.3.2",
+    "angular-route": "~1.3.2",
     "underscore": "~1.7.0",
     "angular-bootstrap": "~0.11.0",
     "restangular": "~1.4.0",
     "bootstrap": "~3.2.0",
     "angular-ui": "~0.4.0",
-    "kendo-ui-core": "~2014.2.903"
+    "kendo-ui-core": "~2014.2.903",
+    "angular-hint": "https://github.com/angular/angular-hint"
   },
   "overrides": {
     "angular-ui": {
@@ -18,6 +19,9 @@
     },
     "angular-bootstrap": {
       "main": "ui-bootstrap-tpls.js"
+    },
+    "angular-hint": {
+      "main": "hint.js"
     }
   },
   "version": "0.4.5",

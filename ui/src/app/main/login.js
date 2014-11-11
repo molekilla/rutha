@@ -1,4 +1,4 @@
-angular.module('rutha.controllers')
-.controller('LoginCtrl', function($scope, $log) {
+angular.module('ruthaAuth')
+.controller('LoginController', function($scope, $log) {
     $log.info('Login controller');
 });

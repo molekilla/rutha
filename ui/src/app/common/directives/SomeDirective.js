@@ -18,5 +18,5 @@ function SomeDirective (SomeService) {
   };
 }
 angular
-  .module('rutha.directives')
-  .directive('SomeDirective', SomeDirective);
+  .module('ruthaDirectives')
+  .directive('ruthaSomeDirective', SomeDirective);

@@ -1,8 +1,8 @@
 // http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/
 
-function MainCtrl () {
+function MainController () {
   
 }
 angular
-  .module('rutha.controllers', [])
-  .controller('MainCtrl', MainCtrl);
+  .module('ruthaControllers', [])
+  .controller('MainController', MainController);

@@ -1,5 +1,5 @@
-angular.module('rutha.controllers')
-.controller('TestCtrl', function($scope, $log) {
+angular.module('ruthaControllers')
+.controller('TestController', function($scope, $log) {
   this.hello = 'Hejsan Rutha!';
   $log.info('Test controller');
 });
