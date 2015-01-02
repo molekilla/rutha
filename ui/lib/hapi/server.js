@@ -122,21 +122,22 @@ var apiPlugins = [
 function LoadAPIServer(server, controllers) {
     server.register(require('hapi-auth-bearer-token'), function(err) {
 
-      server.auth.strategy('token', 'bearer-access-token', {
-          validateFunc: function(token, callback) {
-            var matched = false;
+  server.auth.strategy('token', 'bearer-access-token', {
+      validateFunc: function(token, callback) {
+        // read from db or some place
+        var matched = false;
+        var tokenResult = { token: token };
+        var err = null;
 
-            TokenManager.verify(token, function(err, decoded) {
-              if (err) {
-                logger.error(err);
-                return callback(Boom.internal('Decoding confirmation failed'), matched, null);
-              }
-
-              matched = true;
-              return callback(null, matched, decoded);
-            });
-          }
-      });
+        if (token === 'a1b2c3') {
+          matched = true;
+        } else {
+          tokenResult = null;
+          err = new Error('Unauthorized');
+        }
+        return callback(err, matched, tokenResult);
+      }
+  });
 
 
       server.register(controllers,
