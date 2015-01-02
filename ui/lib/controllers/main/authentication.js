@@ -18,6 +18,7 @@ exports.login = function(request, reply) {
 
       if (!user) {
         reply(Boom.notFound('User not found'));
+        return;
       }
 
       if (user && user.validPassword(request.payload.password)) {
