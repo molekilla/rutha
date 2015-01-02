@@ -19,16 +19,24 @@ var client = Mongoose.connect(config.get('mongodb:connectionString'));
 MongooseHandler.bindEvents(client);
 MongooseHandler.bindModels({
     mongoose: client,
-    modelsPath: __dirname + '/../models'
+    modelsPath: __dirname + '/../../../service/models'
 });
 
 var viewOptions = require('./server_options');
 
 // Create a server with a host and port
-var server = module.exports = Hapi.createServer(config.get('apiServer:host'), config.get('apiServer:port'));
+var server = module.exports = new Hapi.Server();
+server.connection({
+    host: config.get('apiServer:host'),
+    port: config.get('apiServer:port')
+});
 
 // Create a canned response server
-var canned = Hapi.createServer(config.get('apiServer:host'), config.get('apiServer:cannedPort'));
+var canned = new Hapi.Server();
+canned.connection({
+    host: config.get('apiServer:host'),
+    port: 9002
+});
 
 // views
 server.views(viewOptions);
@@ -47,7 +55,7 @@ var compiler = function(template, options) {
 };
 
 // Dependencies
-canned.pack.app = server.pack.app = {
+canned.app = server.app = {
   mongoose: Mongoose,
   config: config,
   logger: logger,
@@ -58,22 +66,22 @@ debug('Set mongoose, config, logger and templateCompiler dependencies');
 
 var controllers = [
   {
-    plugin: require('../controllers/main')
+    register: require('../controllers/main')
   }
 ];
 
 var cannedControllers = [
   {
-    plugin: require('../controllers/main')
+    register: require('../controllers/main')
   },
   {
-    plugin: require('../controllers/canned')
+    register: require('../controllers/canned')
   }
 ];
 
 // we need to include it here, to allow specs to work (module.parent)
 function LoadServer(server, controllers) {
-  server.pack.register([
+  server.register([
     require('hapi-auth-cookie'),
     require('bell')
     ], function(err) {
@@ -95,9 +103,9 @@ function LoadServer(server, controllers) {
     });
 
 
-    server.pack.register(controllers, function(err) {
+    server.register(controllers, function(err) {
       if (!module.parent) {
-        server.pack.start(function () {
+        server.start(function () {
           debug('Server started at port ' + server.info.port);
         });
       }

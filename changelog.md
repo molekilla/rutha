@@ -9,6 +9,15 @@ Pure pragmatic NodeJS stack
 ### Changelog ###
 
 
+#### 0.6.0
+
+* Bump service `hapi` module to 8.0.0
+* Added server.js which loads both frontend and api servers
+* Bump dependencies.
+* Updated README
+* Added `shared` folder, required with server.js. Contains shared config and log.
+* Moved models to service. Frontend now uses this as shared model location.
+
 #### 0.5.0
 
 * Bump service `hapi` module to 7.5.x

@@ -5,6 +5,6 @@ module.exports = {
       }
     },
     compileMode: 'sync',
-    path: './views',
-    partialsPath: './views/partials'
+    path: __dirname + '/../../views',
+    partialsPath: __dirname + '/../../views/partials'
 };
