@@ -12,6 +12,9 @@
     "url": "git://github.com/molekilla/rutha.git"
   },
   "license": "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "hapi": "^8.0.0",
+    "hapi-auth-bearer-token": "^3.1.0"
   }
 }

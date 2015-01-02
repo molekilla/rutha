@@ -9,6 +9,15 @@ Pure pragmatic NodeJS stack
 ### Changelog ###
 
 
+#### 0.6.0
+
+* Bump service `hapi` module to 7.5.x
+* Bump some dependencies.
+* Bump ui `angular` to 1.3.x
+* Bump `rutha-utils` to 1.0.0, contains breaking changes
+* Using `angular-hint` v0.1.0
+* Fix HTML for index.html
+
 #### 0.5.0
 
 * Bump service `hapi` module to 7.5.x

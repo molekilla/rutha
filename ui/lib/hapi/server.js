@@ -33,7 +33,6 @@ MongooseHandler.bindModels({
 // ---------------------------------------------------------
 // Create a server with a host and port
 var server = new Hapi.Server();
-var TokenManager = require('./token_manager').create(logger, config);
 
 // Create a server with a host and port
 var api = server.connection({
@@ -111,7 +110,7 @@ var apiPlugins = [
     }
   },
   {
-    register: require('/../../../service/lib/controllers/users'),
+    register: require('../../../service/lib/controllers/users'),
   }
 ];
 
@@ -176,8 +175,8 @@ function LoadFrontEndServer(server, controllers, apiControllers) {
     });
 
     frontend.auth.strategy('session', 'cookie', {
-        password: config.get('secrets:apiToken'),
-        cookie: 'i_sid',
+        password: config.get('tokenSecret'),
+        cookie: 'sid',
         redirectTo: false,
         isSecure: false,
         ttl: 30 * 60 * 1000

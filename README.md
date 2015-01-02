@@ -10,14 +10,14 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.5.0
+### Last update: 0.6.0
 
 ### Features ###
 
 After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS side project, I figure out that:
 
-* **AngularJS** is a faster approach for most use cases where you don't need rocket scientists or rock stars in your roster (team) to learn all the nuances of working with Backbone (e.g. child views).
-* Corporate support is a must for open source projects, giving my 2 cents to **HapiJS** because it has all features that you need, is stable, and most important, releases are frequent and contributors are a lot (and they don't jump ship to Golang)
+* **AngularJS 1.3.2**
+* **Hapi 8.0.0**
 * **Jasmine 2.0**: Both Angular Protractor and Facebook Jest are based on Jasmine. Using Mocha/Chai combo just adds to your learning curve. Jasmine 2.0 has been given more updates than ever before. Is a must have.
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
 * **BrowserSync**: Choose this because it was painless to configure

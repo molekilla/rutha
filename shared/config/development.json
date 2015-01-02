@@ -19,5 +19,6 @@
     "clientId": "1",
     "clientSecret": "1",
     "callbackUrl": "http://localhost:3000/auth/facebook/callback"
-  }
+  },
+  "tokenSecret": "hapiruthamixedwithangular"
 }
