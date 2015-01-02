@@ -86,7 +86,7 @@ server.register(require('hapi-auth-bearer-token'), function(err) {
 
   server.register(controllers,
    {
-     route: {
+     routes: {
        prefix: '/api'
      }
    }, function() {
