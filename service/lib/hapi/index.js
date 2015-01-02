@@ -1,4 +1,5 @@
 var Hapi = require('hapi');
+var Boom = require('boom');
 var debug = require('debug')('api:main');
 var RuthaUtils = require('rutha-utils');
 var MongooseHandler = require('rutha-utils/mongoose');
@@ -18,38 +19,41 @@ var client = Mongoose.connect(config.get('mongodb:connectionString'));
 MongooseHandler.bindEvents(client);
 MongooseHandler.bindModels({
     mongoose: client,
-    modelsPath: __dirname + '/../models'
+    modelsPath: __dirname + '/../../models'
 });
 
 
 // Create a server with a host and port
-var server = module.exports = Hapi.createServer(config.get('apiServer:host'), config.get('apiServer:port'));
+var server = module.exports = new Hapi.Server();
+server.connection({
+    host: config.get('apiServer:host'),
+    port: config.get('apiServer:port')
+});
 
 // Dependencies
-server.pack.app = {
+server.app = {
   mongoose: client,
   config: config,
   logger: logger
 };
 
-debug('Set mongoose, config, logger dependencies');
 
 // add server methods to IoC mongoose models
 var controllers = [
   {
-    plugin: require('lout'),
+    register: require('lout'),
     options:
     {
       endpoint: '/api/docs'
     }
   },
   {
-    plugin: require('../controllers/users/index'),
+    register: require('../controllers/users'),
   }
 ];
 
 
-server.pack.register(require('hapi-auth-bearer-token'), function(err) {
+server.register(require('hapi-auth-bearer-token'), function(err) {
 
   server.auth.strategy('token', 'bearer-access-token', {
       validateFunc: function(token, callback) {
@@ -80,7 +84,7 @@ server.pack.register(require('hapi-auth-bearer-token'), function(err) {
   });
 
 
-  server.pack.register(controllers,
+  server.register(controllers,
    {
      route: {
        prefix: '/api'

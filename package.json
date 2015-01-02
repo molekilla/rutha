@@ -1,6 +1,7 @@
 {
   "name": "rutha_stack",
-  "version": "0.5.0",
+  "version": "0.6.0",
+  "main": "ui/lib/hapi/server.js",
   "description": "Rutha Dev Stack",
   "scripts": {
     "test": "grunt spec --gruntfile ui/Gruntfile.js && grunt spec --gruntfile service/Gruntfile.js"
