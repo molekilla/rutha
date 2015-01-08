@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.6.0
+### Last update: 0.6.1
 
 ### Features ###
 
@@ -40,9 +40,14 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 ### Installing ###
 1. Clone repo
 2. Rename text containing `rutha` to `your_app_name`
-3. `npm install`
-4. `bower install`
-5. (Optional) `npm install grunt-cli -g`
+3. Be sure to have node 0.10.32 or greater (e.g. nvm use 0.10.32)
+4. Run `npm install grunt-cli -g`
+5. Change dir to ui and run `npm install` and then `bower install`
+6. Open a new tab and change dir to service and run `npm install`
+
+## Production deployment recommendation ##
+
+1. Use ui/server.js
 
 ### Grunt Help (Service) ###
 
