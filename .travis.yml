@@ -10,9 +10,11 @@ env:
 before_install:
   - npm config set spin false
   - npm install -g grunt-cli
+  - npm install -g bower
 install:
   - cd $UI
   - npm install
+  - bower install
   - cd ..
   - cd $API
   - npm install
