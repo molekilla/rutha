@@ -8,6 +8,13 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.6.1
+
+* Adding missing `bcrypt-nodejs` dependency in service
+* Bump ui `rutha-grunt-tasks-ui` module to 0.2.3
+* Bump some dev dependencies
+* Updating installation steps
+* UI specs: Added `app/app.js` in karma.conf to fix issues with modules not being loaded
 
 #### 0.6.0
 

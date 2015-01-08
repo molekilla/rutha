@@ -26,11 +26,13 @@ module.exports = function(grunt) {
             cwd: process.cwd(),
             pkg: grunt.file.readJSON('package.json')
         },
-        jitGrunt: {
+        jitGrunt: { 
+          staticMappings: {
             protractor: 'grunt-protractor-runner',
             ngAnnotate: 'grunt-ng-annotate',
             ngtemplates: 'grunt-angular-templates',
             'validate-package': 'grunt-nsp-package'
+          }
         }
     });
 

@@ -17,9 +17,9 @@ module.exports = function(config) {
       '../dist/components/bootstrap/dist/js/bootstrap.js',
       '../dist/components/angular-ui/build/angular-ui.js',
       '../dist/components/kendo-ui-core/js/kendo.ui.core.min.js',
-      '../dist/components/angular-hint/hint.js',
       // endbower
       'test/lib/angular-mocks/angular-mocks.js',
+      'app/app.js',
       'app/**/*.js',
       'test/templates.js',
       'test/unit/**/*.js'
