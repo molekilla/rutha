@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Rutha by molekilla</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Rutha</h1>
+        <p class="header">An Hapi Angular Front End Stack</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/molekilla/rutha/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/molekilla/rutha/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/molekilla/rutha">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/molekilla">molekilla</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="rutha-stack---taming-hapijs-and-angularjs" class="anchor" href="#rutha-stack---taming-hapijs-and-angularjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rutha Stack - Taming HapiJS and AngularJS</h1>
+
+<p><strong>Ru</strong> le 
+<strong>T</strong> hem 
+<strong>H</strong> apiJS 
+<strong>A</strong> ngularJS</p>
+
+<p><a href="https://travis-ci.org/molekilla/rutha"><img src="https://travis-ci.org/molekilla/rutha.svg?branch=master" alt="Build Status"></a></p>
+
+<p>Pure pragmatic NodeJS stack</p>
+
+<p>For updates, read <a href="changelog.md">changelog</a></p>
+
+<h3>
+<a id="last-update-061" class="anchor" href="#last-update-061" aria-hidden="true"><span class="octicon octicon-link"></span></a>Last update: 0.6.1</h3>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li>
+<strong>Rule Them All with a single environment</strong>: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.</li>
+<li>
+<strong>Specs and Functional Tests (Frontend)</strong>: Based partially on <a href="http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html">year of moo</a> </li>
+<li>
+<strong>Frontend Code Patterns</strong> <a href="http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/">Todd Motto's</a> AngularJS guideline: I also based some ideas on <a href="http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913">PackPub's Angular Book</a>
+</li>
+<li><a href="http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local">Chris Sevilleja's 'Easy Node authentication' local and facebook sample code for HapiJS</a></li>
+<li>Uses canned responses / server mocks / nobackend inspired by Euge's <a href="https://github.com/euge/canned-responses">canned responses</a>
+</li>
+<li><a href="https://github.com/angular/angular-hint">Angular Hint</a></li>
+</ul>
+
+<h4>
+<a id="server" class="anchor" href="#server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server</h4>
+
+<ul>
+<li><strong>Hapi 8.0.0</strong></li>
+<li><strong>Underscore for frontend server side templates</strong></li>
+</ul>
+
+<h4>
+<a id="frontend" class="anchor" href="#frontend" aria-hidden="true"><span class="octicon octicon-link"></span></a>Frontend</h4>
+
+<ul>
+<li><strong>AngularJS 1.3.2</strong></li>
+</ul>
+
+<h4>
+<a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tooling</h4>
+
+<ul>
+<li><strong>Jasmine 2.0</strong></li>
+<li><strong>Grunt JIT</strong></li>
+<li><strong>BrowserSync</strong></li>
+<li><a href="https://github.com/mzgol/grunt-ng-annotate">Grunt ngAnnotate</a></li>
+<li><a href="https://github.com/ericclemmons/grunt-angular-templates">Grunt Angular Templates</a></li>
+<li><a href="https://github.com/stephenplusplus/grunt-wiredep">Grunt  Wiredep</a></li>
+<li>
+<strong>Visionmedia/debug</strong> <a href="https://github.com/visionmedia/debug">module</a> by default</li>
+<li>
+<strong>Lout module</strong> for <a href="https://github.com/spumko/lout">API docs</a> by default</li>
+<li>Basic cssmin task</li>
+<li>
+<code>grunt-nsp-package</code> support</li>
+<li><a href="http://gotwarlost.github.io/istanbul/">Istanbul code coverage support</a></li>
+</ul>
+
+<h3>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing</h3>
+
+<ol>
+<li>Clone repo</li>
+<li>Rename text containing <code>rutha</code> to <code>your_app_name</code>
+</li>
+<li>Be sure to have node 0.10.32 or greater (e.g. nvm use 0.10.32)</li>
+<li>Run <code>npm install grunt-cli -g</code>
+</li>
+<li>Change dir to ui and run <code>npm install</code> and then <code>bower install</code>
+</li>
+<li>Open a new tab and change dir to service and run <code>npm install</code>
+</li>
+</ol>
+
+<h2>
+<a id="production-deployment-recommendation" class="anchor" href="#production-deployment-recommendation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Production deployment recommendation</h2>
+
+<ol>
+<li>Use ui/server.js</li>
+</ol>
+
+<h3>
+<a id="grunt-help-service" class="anchor" href="#grunt-help-service" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt Help (Service)</h3>
+
+<ul>
+<li>
+<code>grunt serve</code>: Serves API service</li>
+<li>
+<code>grunt spec</code>: Runs Jasmine 2.0 specs</li>
+<li>
+<code>grunt coverage</code>: Runs Istanbul code coverage. Outputs HTML reports to <code>test/coverage/reports</code>
+</li>
+<li>
+<code>grunt auditpkg</code>: Verifies modules that contains security issues</li>
+<li>
+<code>grunt migrate:create [--name]</code>: Creates a migration task. Args: --name: migration name (optional)</li>
+<li>
+<code>grunt migrate:up [--revision]</code>: Migrates up. Args: --revision: revision name (optional)</li>
+<li>
+<code>grunt migrate:down [--revision]</code>: Migrates down. Args: --revision: revision name (optional)</li>
+</ul>
+
+<h3>
+<a id="grunt-help-frontend" class="anchor" href="#grunt-help-frontend" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt Help (Frontend)</h3>
+
+<ul>
+<li>
+<code>grunt serve</code>: Serves frontend service with no auto reload</li>
+<li>
+<code>grunt autosync</code>: Serves frontend service with auto reload</li>
+<li>
+<code>grunt spec</code>: Runs jshint and server side / UI specs</li>
+<li>
+<code>grunt test</code>: Runs E2E/Functional tests (Angular)</li>
+<li>
+<code>grunt build</code>: Prepares UI assets</li>
+<li>
+<code>grunt jshinting</code>: Verifies javascript using jshint</li>
+<li>
+<code>grunt auditpkg</code>: Verifies modules that contains security issues</li>
+</ul>
+
+<h3>
+<a id="about-angular-tests" class="anchor" href="#about-angular-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>About Angular Tests</h3>
+
+<p><code>ui/src/test/lib</code> contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)</p>
+
+<h3>
+<a id="nginx-routes-optional" class="anchor" href="#nginx-routes-optional" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nginx routes (Optional)</h3>
+
+<pre><code>server { 
+# simple reverse-proxy for Rutha (Very useful!)
+    listen       80;
+    server_name  localhost;
+    access_log   dev.log;
+    #error_page   http://here;
+
+  location /api {
+    proxy_pass      http://127.0.0.1:3002;
+    proxy_redirect  default;
+    proxy_set_header Host $host;
+  }
+
+  location / {
+    proxy_pass      http://127.0.0.1:3005;
+    proxy_redirect  default;
+    proxy_set_header Host $host;
+  }
+}
+
+</code></pre>
+
+<h3>
+<a id="maintainers" class="anchor" href="#maintainers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maintainers</h3>
+
+<p>Rogelio Morrell C. </p>
+
+<h3>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h3>
+
+<p>Feel free to fork. MIT Licensed.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
