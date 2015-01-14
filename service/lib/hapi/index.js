@@ -37,23 +37,43 @@ server.app = {
   logger: logger
 };
 
-
 // add server methods to IoC mongoose models
 var controllers = [
-  {
-    register: require('lout'),
-    options:
-    {
-      endpoint: '/api/docs'
-    }
-  },
   {
     register: require('../controllers/users'),
   }
 ];
 
+var serverPlugins = [
+  {
+    register: require('hapi-auth-bearer-token')    
+  },
+  {
+    register: require('hapi-swagger'),
+    options:
+    {
+      basePath: 'http://localhost:' + config.get('apiServer:port'),
+      apiVersion: '1.0',
+      documentationPath: '/api_docs',
+      endpoint: '/rest_docs',
+      authorizations: {
+        token: {
+            type: "apiKey",
+            passAs: "header",
+            keyname: "authentication"
+        }
+      },
+      info: {
+        title: 'Rutha REST API Documentation',
+        description: 'REST API Docs.',
+        contact: 'molekilla@gmail.com',
+        license: 'MIT'
+      }
+    }
+  }
+];
 
-server.register(require('hapi-auth-bearer-token'), function(err) {
+server.register(serverPlugins, function(err) {
 
   server.auth.strategy('token', 'bearer-access-token', {
       validateFunc: function(token, callback) {

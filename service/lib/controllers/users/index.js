@@ -8,6 +8,9 @@ exports.register = function(plugin, options, next) {
     path: '/v1/users',
     handler: createHandler,
     config: {
+        description: 'A new account',
+        notes: 'Creates a new account',
+        tags: ['api'],        
     	auth: 'token'
     }
   });
