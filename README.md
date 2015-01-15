@@ -34,6 +34,8 @@ For updates, read [changelog](changelog.md)
 * [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/)
 * Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
 * [Angular Hint](https://github.com/angular/angular-hint)
+* [Hapi Swagger](https://github.com/glennjones/hapi-swagger)
+* [Grunt JSDoc3](https://github.com/krampstudio/grunt-jsdoc)
 
 ### Installing ###
 1. Clone repo
@@ -56,6 +58,7 @@ For updates, read [changelog](changelog.md)
 * `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
 * `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)
 * `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
+* `grunt docs`: Builds jsdoc3 documentation.
 
 ### Grunt Help (Frontend) ###
 
