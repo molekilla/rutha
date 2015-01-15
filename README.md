@@ -10,11 +10,9 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.6.1
+### Last update: 0.6.2
 
 ### Features ###
-
-After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS side project, I figure out that:
 
 * **AngularJS 1.3.2**
 * **Hapi 8.0.0**
@@ -36,6 +34,8 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/)
 * Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
 * [Angular Hint](https://github.com/angular/angular-hint)
+* [Hapi Swagger](https://github.com/glennjones/hapi-swagger)
+* [Grunt JSDoc3](https://github.com/krampstudio/grunt-jsdoc)
 
 ### Installing ###
 1. Clone repo
@@ -58,6 +58,7 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
 * `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)
 * `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
+* `grunt docs`: Builds jsdoc3 documentation.
 
 ### Grunt Help (Frontend) ###
 

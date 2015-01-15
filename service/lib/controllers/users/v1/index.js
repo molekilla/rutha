@@ -1,7 +1,14 @@
 
 var debug = require('debug')('users:list');
+/** @module users */
 
-module.exports = function(request, reply) {
+/**
+ * Creates a new user
+ * @function
+ * @param {Object} request - A Hapi Request
+ * @param {Object} reply - A Hapi Reply
+ */
+exports.create = function(request, reply) {
     var server = request.server;
     var UserModel = server.app.mongoose.models.User;
     

@@ -3,6 +3,7 @@
 node_modules/
 logs/
 dist/
+docs/
 
 # Files
 # test.pdf
