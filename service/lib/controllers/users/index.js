@@ -1,12 +1,12 @@
 var debug = require('debug')('users');
-var createHandler = require('./v1/create.js');
+var users = require('./v1');
 
 exports.register = function(plugin, options, next) {
 
   plugin.route({
     method: 'POST',
     path: '/v1/users',
-    handler: createHandler,
+    handler: users.create,
     config: {
     	auth: 'token'
     }

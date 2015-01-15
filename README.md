@@ -10,11 +10,9 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.6.1
+### Last update: 0.6.2
 
 ### Features ###
-
-After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS side project, I figure out that:
 
 * **AngularJS 1.3.2**
 * **Hapi 8.0.0**
