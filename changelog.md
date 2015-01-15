@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.6.2
+
+* Adding `grunt-jsdoc` in service (with `rutha-grunt-tasks-service`). Closes issue #21.
+* Adding `hapi-swagger` in service. Closes issue #12.
+
 #### 0.6.1
 
 * Adding missing `bcrypt-nodejs` dependency in service
