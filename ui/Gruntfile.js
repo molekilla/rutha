@@ -6,7 +6,15 @@ module.exports = function(grunt) {
     require('load-grunt-config')(grunt, {
         configPath: path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-ui/grunt'), //path to task.js files, defaults to grunt dir
         init: true, //auto grunt.initConfig
-        data: { //data passed into config.  Can use with <%= test %>
+        data: { 
+            releaseInclude: {
+              css: ['dist/components/bootstrap/dist/css/bootstrap.css'],
+              js:  []
+            },
+            bowerConcat: {
+              exclude: ['angular', 'jquery', 'kendo-ui-core'],
+              dependencies: null
+            },          
             nodeInspector: {
                 webPort: 8082,
                 debugPort: 5859

@@ -1,12 +1,12 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Rutha Front End",
   "main": "lib/hapi/index.js",
   "scripts": {
     "start": "node lib/hapi/index.js",
     "test": "grunt test",
-    "install": "node node_modules/protractor/bin/webdriver-manager update"
+    "postinstall": "grunt postinstall"
   },
   "author": "Rogelio Morrell",
   "repository": {
@@ -18,8 +18,10 @@
     "concat": "~1.0.0",
     "grunt": "~0.4.5",
     "grunt-angular-templates": "^0.5.7",
+    "grunt-bower-concat": "^0.4.0",
     "grunt-browser-sync": "^1.3.5",
     "grunt-concurrent": "~1.0.0",
+    "grunt-contrib-compress": "^0.13.0",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-copy": "~0.7.0",
     "grunt-contrib-cssmin": "^0.10.0",
@@ -36,6 +38,7 @@
     "grunt-nodemon": "~0.2.1",
     "grunt-nsp-package": "0.0.5",
     "grunt-protractor-runner": "^1.1.0",
+    "grunt-shell": "^1.1.1",
     "grunt-wiredep": "~2.0.0",
     "jasmine-node": "~2.0.0",
     "jit-grunt": "~0.9.0",
@@ -48,7 +51,7 @@
     "load-grunt-config": "~0.16.0",
     "ng-annotate": "~0.14.1",
     "protractor": "^1.0.0",
-    "rutha-grunt-tasks-ui": "^0.2.3",
+    "rutha-grunt-tasks-ui": "^0.3.5",
     "time-grunt": "~1.0.0",
     "uglifyjs": "~2.3.6"
   },
