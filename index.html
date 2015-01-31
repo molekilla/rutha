@@ -43,7 +43,7 @@
 <p>Pure pragmatic NodeJS stack</p>
 
 <h3>
-<a id="last-update-062" class="anchor" href="#last-update-062" aria-hidden="true"><span class="octicon octicon-link"></span></a>Last update: 0.6.2</h3>
+<a id="last-update-063" class="anchor" href="#last-update-063" aria-hidden="true"><span class="octicon octicon-link"></span></a>Last update: 0.6.3</h3>
 
 <p><a href="https://github.com/molekilla/rutha/blob/master/changelog.md">Changelog</a></p>
 
@@ -124,10 +124,66 @@
 </ol>
 
 <h2>
-<a id="production-deployment-recommendation" class="anchor" href="#production-deployment-recommendation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Production deployment recommendation</h2>
+<a id="deploying-rutha-apps-with-forthcoming-rutha-deploy-beta" class="anchor" href="#deploying-rutha-apps-with-forthcoming-rutha-deploy-beta" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying rutha apps with forthcoming rutha-deploy (beta)</h2>
 
 <ol>
-<li>Use ui/server.js</li>
+<li>Run <code>grunt build</code> to generate frontend assets</li>
+<li>Add zip file to commit e.g. git add releases/v0.1.0.zip. </li>
+<li>
+<p>In rutha-deploy, configure group_vars with your settings</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c"># devops</span>
+<span class="pl-c1">domain:</span> disrupting_app.com
+<span class="pl-c1">ssl_name:</span> disrupting_app
+<span class="pl-c"># rutha</span>
+<span class="pl-c1">app_name:</span> disrupting_app
+<span class="pl-c1">app_repo:</span> git<span class="pl-vo">@github</span>.<span class="pl-c1">com:</span>molekilla<span class="pl-k">/</span>rutha.git
+<span class="pl-c1">app_branch:</span> release0.<span class="pl-c1">1.0</span>
+<span class="pl-c1">app_version:</span> v0.<span class="pl-c1">1.0</span>
+<span class="pl-c1">app_env:</span> 
+  <span class="pl-c1">NODE_ENV:</span> production</pre></div>
+</li>
+<li><p>Add hosts to /etc/ansible/hosts</p></li>
+<li>
+<p>Enable host in playbook.yml</p>
+
+<div class="highlight highlight-yaml"><pre><span class="pl-s1">-<span class="pl-s1">--</span></span>
+<span class="pl-c"># This playbook deploys a rutha server.</span>
+
+<span class="pl-s1">- <span class="pl-ent">hosts:</span> <span class="pl-s1">my_cloud</span></span>
+  <span class="pl-s1"><span class="pl-ent">sudo:</span> <span class="pl-s1">yes</span></span>
+  <span class="pl-s1"><span class="pl-ent">remote_user:</span> <span class="pl-s1">mycloud</span></span>
+
+  <span class="pl-c"># localhost staging - 192.168.88.88</span>
+  <span class="pl-c"># - hosts: all</span>
+
+  <span class="pl-s1"><span class="pl-ent">roles:</span></span>
+    <span class="pl-s1">- <span class="pl-s1">nodejs</span></span>
+    <span class="pl-s1">- <span class="pl-s1">nodejs_modules</span></span>
+    <span class="pl-s1">- <span class="pl-s1">mongodb</span></span>
+    <span class="pl-s1">- <span class="pl-s1">rutha    </span></span>
+    <span class="pl-s1">- <span class="pl-s1">nginx</span></span></pre></div>
+</li>
+<li><p>Configure cloud / server with SSH key to get repo (or customize rutha-deploy to fetch from somewhere else).</p></li>
+<li>Run <code>ansible-playbook provisioning/playbook.yml --private-key ~/keys/mykey.pem -u mycloud</code> or configure Gruntfile and run <code>grunt deploy</code>
+</li>
+</ol>
+
+<h2>
+<a id="deploying-rutha-frontend-app" class="anchor" href="#deploying-rutha-frontend-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying rutha frontend app</h2>
+
+<ol>
+<li>Run <code>grunt build</code> to generate frontend assets</li>
+<li>Add zip file to commit e.g. git add releases/v0.1.0.zip (or customize rutha-deploy to fetch from somewhere else).</li>
+<li>In your devops workflow, unpack zip and run ui/lib/hapi/index.js </li>
+</ol>
+
+<h2>
+<a id="deploying-rutha-service-app" class="anchor" href="#deploying-rutha-service-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying rutha service app</h2>
+
+<ol>
+<li>Copy service directory or get from repo</li>
+<li>In your devops workflow, run service/lib/hapi/index.js </li>
 </ol>
 
 <h3>
