@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 For updates, read [changelog](changelog.md)
 
-### Last update: 0.6.2
+### Last update: 0.6.3
 
 ### Features ###
 
@@ -45,9 +45,61 @@ For updates, read [changelog](changelog.md)
 5. Change dir to ui and run `npm install` and then `bower install`
 6. Open a new tab and change dir to service and run `npm install`
 
-## Production deployment recommendation ##
+## Deploying rutha apps with forthcoming rutha-deploy (beta) ##
 
-1. Use ui/server.js
+1. Run `grunt build` to generate frontend assets
+2. Add zip file to commit e.g. git add releases/v0.1.0.zip. 
+3. In rutha-deploy, configure group_vars with your settings
+
+    ```ruby
+    # devops
+    domain: disrupting_app.com
+    ssl_name: disrupting_app
+    # rutha
+    app_name: disrupting_app
+    app_repo: git@github.com:molekilla/rutha.git
+    app_branch: release0.1.0
+    app_version: v0.1.0
+    app_env: 
+      NODE_ENV: production
+    ```
+    
+4. Add hosts to /etc/ansible/hosts
+5. Enable host in playbook.yml
+
+    ```yaml
+    ---
+    # This playbook deploys a rutha server.
+
+    - hosts: my_cloud
+      sudo: yes
+      remote_user: mycloud
+
+      # localhost staging - 192.168.88.88
+      # - hosts: all
+
+      roles:
+        - nodejs
+        - nodejs_modules
+        - mongodb
+        - rutha    
+        - nginx
+    ```
+   
+6. Configure cloud / server with SSH key to get repo (or customize rutha-deploy to fetch from somewhere else).
+7. Run `ansible-playbook provisioning/playbook.yml --private-key ~/keys/mykey.pem -u mycloud` or configure Gruntfile and run `grunt deploy`
+
+## Deploying rutha frontend app ##
+
+1. Run `grunt build` to generate frontend assets
+2. Add zip file to commit e.g. git add releases/v0.1.0.zip (or customize rutha-deploy to fetch from somewhere else).
+3. In your devops workflow, unpack zip and run ui/lib/hapi/index.js 
+
+## Deploying rutha service app ##
+
+1. Copy service directory or get from repo
+3. In your devops workflow, run service/lib/hapi/index.js 
+
 
 ### Grunt Help (Service) ###
 

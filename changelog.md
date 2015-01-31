@@ -8,6 +8,12 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.6.3
+
+* Adding `grunt-bower-concat`. Wiredep still used by Angular Unit Tests.
+* Update `rutha-grunt-tasks-ui` module to 0.3.5.
+* `grunt build` integrated with `rutha-deploy` making rutha apps deployments easier.
+
 #### 0.6.2
 
 * Adding `grunt-jsdoc` in service (with `rutha-grunt-tasks-service`). Closes issue #21.
