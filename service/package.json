@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_service",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Rutha REST API Service",
   "main": "lib/hapi/index.js",
   "scripts": {
