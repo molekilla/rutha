@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "main": "ui/lib/hapi/server.js",
   "description": "Rutha Dev Stack",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "hapi": "^8.0.0",
+    "hapi": "^8.1.0",
     "hapi-auth-bearer-token": "^3.1.0"
   }
 }

@@ -8,9 +8,16 @@
 
 Pure pragmatic NodeJS stack
 
-For updates, read [changelog](changelog.md)
+#### Changelog: [changelog](changelog.md)
 
-### Last update: 0.6.3
+#### Last update: 0.6.4
+
+#### Docs:
+
+* [rutha - A Hapi and Angular boilerplate stack - English](http://yoworkeo.blogspot.com/2015/02/rutha-hapi-and-angular-boilerplate-stack.html)
+* [Hapi View Partials - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-view-partials-con-underscorejs.html)
+* [Hapi REST Authentication - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-autenticacion-rest-con-hapi-auth.html)
+* [Hapi Tutorials](http://hapijs.com/tutorials)
 
 ### Features ###
 

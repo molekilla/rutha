@@ -8,6 +8,13 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.6.4
+
+* Bump ui dependencies
+* Bump `hapi` to 8.1.0
+* Adding `grunt-preprocess`.
+* Update `rutha-grunt-tasks-ui` module to 0.3.6.
+
 #### 0.6.3
 
 * Adding `grunt-bower-concat`. Wiredep still used by Angular Unit Tests.
