@@ -44,7 +44,7 @@ Pure pragmatic NodeJS stack
 * [Hapi Swagger](https://github.com/glennjones/hapi-swagger)
 * [Grunt JSDoc3](https://github.com/krampstudio/grunt-jsdoc)
 
-### Installing ###
+## Installing
 1. Clone repo
 2. Rename text containing `rutha` to `your_app_name`
 3. Be sure to have node 0.10.32 or greater (e.g. nvm use 0.10.32)
@@ -52,7 +52,7 @@ Pure pragmatic NodeJS stack
 5. Change dir to ui and run `npm install` and then `bower install`
 6. Open a new tab and change dir to service and run `npm install`
 
-## Deploying rutha apps with forthcoming rutha-deploy (beta) ##
+## Deploying rutha apps with rutha-deploy ##
 
 1. Run `grunt build` to generate frontend assets
 2. Add zip file to commit e.g. git add releases/v0.1.0.zip. 
@@ -72,43 +72,23 @@ Pure pragmatic NodeJS stack
     ```
     
 4. Add hosts to /etc/ansible/hosts
-5. Enable host in playbook.yml
-
-    ```yaml
-    ---
-    # This playbook deploys a rutha server.
-
-    - hosts: my_cloud
-      sudo: yes
-      remote_user: mycloud
-
-      # localhost staging - 192.168.88.88
-      # - hosts: all
-
-      roles:
-        - nodejs
-        - nodejs_modules
-        - mongodb
-        - rutha    
-        - nginx
-    ```
-   
+5. Enable host in ui/Gruntfile.js by adding it to deploySettings.
 6. Configure cloud / server with SSH key to get repo (or customize rutha-deploy to fetch from somewhere else).
-7. Run `ansible-playbook provisioning/playbook.yml --private-key ~/keys/mykey.pem -u mycloud` or configure Gruntfile and run `grunt deploy`
+7. Run `grunt deploy`
 
-## Deploying rutha frontend app ##
+### Deploying rutha frontend app
 
 1. Run `grunt build` to generate frontend assets
 2. Add zip file to commit e.g. git add releases/v0.1.0.zip (or customize rutha-deploy to fetch from somewhere else).
 3. In your devops workflow, unpack zip and run ui/lib/hapi/index.js 
 
-## Deploying rutha service app ##
+### Deploying rutha service app
 
 1. Copy service directory or get from repo
 3. In your devops workflow, run service/lib/hapi/index.js 
 
 
-### Grunt Help (Service) ###
+## Grunt Help (Service)
 
 * `grunt serve`: Serves API service
 * `grunt spec`: Runs Jasmine 2.0 specs
@@ -119,7 +99,7 @@ Pure pragmatic NodeJS stack
 * `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
 * `grunt docs`: Builds jsdoc3 documentation.
 
-### Grunt Help (Frontend) ###
+## Grunt Help (Frontend)
 
 * `grunt serve`: Serves frontend service with no auto reload
 * `grunt autosync`: Serves frontend service with auto reload
