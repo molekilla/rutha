@@ -52,7 +52,7 @@ Pure pragmatic NodeJS stack
 5. Change dir to ui and run `npm install` and then `bower install`
 6. Open a new tab and change dir to service and run `npm install`
 
-## Deploying rutha apps with rutha-deploy ##
+## Deploying rutha apps with rutha_deploy ##
 
 1. Run `grunt build` to generate frontend assets
 2. Add zip file to commit e.g. git add releases/v0.1.0.zip. 
