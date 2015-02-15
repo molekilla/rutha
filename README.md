@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 0.6.4
+#### Last update: 0.6.5
 
 #### Docs:
 
@@ -21,7 +21,7 @@ Pure pragmatic NodeJS stack
 
 ### Features ###
 
-* **AngularJS 1.3.2**
+* **AngularJS 1.3.x**
 * **Hapi 8.0.0**
 * **Jasmine 2.0**: Both Angular Protractor and Facebook Jest are based on Jasmine. Using Mocha/Chai combo just adds to your learning curve. Jasmine 2.0 has been given more updates than ever before. Is a must have.
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
@@ -88,7 +88,7 @@ Pure pragmatic NodeJS stack
 3. In your devops workflow, run service/lib/hapi/index.js 
 
 
-## Grunt Help (Service)
+## Grunt Help - Service tasks
 
 * `grunt serve`: Serves API service
 * `grunt spec`: Runs Jasmine 2.0 specs
@@ -99,13 +99,16 @@ Pure pragmatic NodeJS stack
 * `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
 * `grunt docs`: Builds jsdoc3 documentation.
 
-## Grunt Help (Frontend)
+## Grunt Help - Frontend tasks
 
 * `grunt serve`: Serves frontend service with no auto reload
 * `grunt autosync`: Serves frontend service with auto reload
 * `grunt spec`: Runs jshint and server side / UI specs
 * `grunt test`: Runs E2E/Functional tests (Angular)
 * `grunt build`: Prepares UI assets
+* `grunt stagelocal`: Provisions Vagrant VM
+* `grunt staging`: Provisions staging
+* `grunt deploy`: Provisions production
 * `grunt jshinting`: Verifies javascript using jshint
 * `grunt auditpkg`: Verifies modules that contains security issues
 
