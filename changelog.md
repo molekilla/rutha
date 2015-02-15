@@ -8,6 +8,12 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.6.5
+
+* Bump ui and service dependencies
+* Bump `hapi` to 8.2.0
+* Update `rutha-grunt-tasks-ui` module to 0.4.0, which adds support for rutha_deploy
+
 #### 0.6.4
 
 * Bump ui dependencies
