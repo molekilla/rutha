@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 0.7.0
+#### Last update: 0.7.1
 
 #### Docs:
 
@@ -18,19 +18,25 @@ Pure pragmatic NodeJS stack
 * [Hapi View Partials - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-view-partials-con-underscorejs.html)
 * [Hapi REST Authentication - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-autenticacion-rest-con-hapi-auth.html)
 * [Hapi Tutorials](http://hapijs.com/tutorials)
+* [BabelJS: Learn ES6](https://babeljs.io/docs/learn-es6/)
+* [ECMAScript6 by Luke Hoban](https://github.com/lukehoban/es6features)
+* [Jasmine BDD Introduction](http://jasmine.github.io/2.2/introduction.html)
 
-### Features ###
+### Main features ###
 
+* **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **AngularJS 1.3.x**
 * **Hapi 8.0.0**
-* **Jasmine 2.0**: Both Angular Protractor and Facebook Jest are based on Jasmine. Using Mocha/Chai combo just adds to your learning curve. Jasmine 2.0 has been given more updates than ever before. Is a must have.
+* **BabelJS** for node
+* **Jasmine NPM**
+
+### Additional features
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
 * **BrowserSync**: Choose this because it was painless to configure
 * **Underscore for frontend server side templates**: To avoid issues with AngularJS.
 * [Grunt ngAnnotate](https://github.com/mzgol/grunt-ng-annotate)
 * [Grunt Angular Templates](https://github.com/ericclemmons/grunt-angular-templates)
 * [Grunt  Wiredep](https://github.com/stephenplusplus/grunt-wiredep)
-* **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **Specs and Functional Tests (Frontend)**: Based partially on [year of moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html) 
 * **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
