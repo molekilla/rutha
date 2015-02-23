@@ -8,6 +8,10 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.7.1
+
+* Replaced `jasmine-node` with Jasmine NPM for service specs. Coverage still uses `jasmine-node`.
+
 #### 0.7.0
 
 ##### Service

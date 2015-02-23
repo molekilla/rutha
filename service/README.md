@@ -28,7 +28,7 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 ### Grunt Help (Service) ###
 
 * `grunt serve`: Serves API service
-* `grunt spec`: Runs Jasmine 2.0 specs
+* `grunt spec`: Runs Jasmine NPM specs
 * `grunt coverage`: Runs Istanbul code coverage. Outputs HTML reports to `test/coverage/reports`
 * `grunt auditpkg`: Verifies modules that contains security issues
 * `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)

@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 0.7.0
+#### Last update: 0.7.1
 
 #### Docs:
 
@@ -19,11 +19,14 @@ Pure pragmatic NodeJS stack
 * [Hapi REST Authentication - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-autenticacion-rest-con-hapi-auth.html)
 * [Hapi Tutorials](http://hapijs.com/tutorials)
 
-### Features ###
+### Main features ###
 
 * **AngularJS 1.3.x**
 * **Hapi 8.0.0**
-* **Jasmine 2.0**: Both Angular Protractor and Facebook Jest are based on Jasmine. Using Mocha/Chai combo just adds to your learning curve. Jasmine 2.0 has been given more updates than ever before. Is a must have.
+* **BabelJS** for node
+* **Jasmine NPM**
+
+### Additional features
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
 * **BrowserSync**: Choose this because it was painless to configure
 * **Underscore for frontend server side templates**: To avoid issues with AngularJS.
