@@ -21,12 +21,14 @@ module.exports = function(grunt) {
             },
             cwd: process.cwd()
         },
-        jitGrunt: {
+       jitGrunt: {
+        staticMappings: {
             instrument: 'grunt-istanbul',
             storeCoverage: 'grunt-istanbul',
             makeReport: 'grunt-istanbul',
             'validate-package': 'grunt-nsp-package'
-        }
+        }     
+       }
     });
 
 

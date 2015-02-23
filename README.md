@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 0.6.5
+#### Last update: 0.7.0
 
 #### Docs:
 

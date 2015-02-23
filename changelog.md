@@ -8,6 +8,18 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 0.7.0
+
+##### Service
+* Added task grunt-babel. Any *.es6 will transpile to ES5 / *.js
+* Added better JSHint
+* `grunt serve` now runs Babel and JSHint immediately
+
+##### UI
+
+* Added task `grunt-babel` for UI frontend hapi. Any *.es6 will transpile to ES5 / *.js
+* Updated `grunt staging` and `grunt deploy` tasks with Ansible coloring
+
 #### 0.6.5
 
 * Bump ui and service dependencies
