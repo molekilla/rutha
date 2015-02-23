@@ -18,9 +18,13 @@ Pure pragmatic NodeJS stack
 * [Hapi View Partials - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-view-partials-con-underscorejs.html)
 * [Hapi REST Authentication - Spanish](http://yoworkeo.blogspot.com/2014/08/hapijs-autenticacion-rest-con-hapi-auth.html)
 * [Hapi Tutorials](http://hapijs.com/tutorials)
+* [BabelJS: Learn ES6](https://babeljs.io/docs/learn-es6/)
+* [ECMAScript6 by Luke Hoban](https://github.com/lukehoban/es6features)
+* [Jasmine BDD Introduction](http://jasmine.github.io/2.2/introduction.html)
 
 ### Main features ###
 
+* **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **AngularJS 1.3.x**
 * **Hapi 8.0.0**
 * **BabelJS** for node
@@ -33,7 +37,6 @@ Pure pragmatic NodeJS stack
 * [Grunt ngAnnotate](https://github.com/mzgol/grunt-ng-annotate)
 * [Grunt Angular Templates](https://github.com/ericclemmons/grunt-angular-templates)
 * [Grunt  Wiredep](https://github.com/stephenplusplus/grunt-wiredep)
-* **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **Specs and Functional Tests (Frontend)**: Based partially on [year of moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html) 
 * **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
