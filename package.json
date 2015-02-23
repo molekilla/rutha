@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "main": "ui/lib/hapi/server.js",
   "description": "Rutha Dev Stack",
   "scripts": {
@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git://github.com/molekilla/rutha.git"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },  
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
