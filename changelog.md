@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+
+#### 0.7.2
+
+* Bump `grunt-node-inspector` 0.1.6
+
 #### 0.7.1
 
 * Replaced `jasmine-node` with Jasmine NPM for service specs. Coverage still uses `jasmine-node`.
