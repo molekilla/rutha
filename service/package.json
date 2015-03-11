@@ -1,6 +1,6 @@
 {
   "name": "rutha_stack_service",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Rutha REST API Service",
   "main": "lib/hapi/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "grunt-env": "~0.4.1",
     "grunt-istanbul": "0.3.0",
     "grunt-jsdoc": "^0.6.2",
-    "grunt-node-inspector": "~0.1.5",
+    "grunt-node-inspector": "~0.1.6",
     "grunt-nodemon": "~0.2.1",
     "grunt-nsp-package": "0.0.5",
     "grunt-shell": "^1.1.1",
@@ -38,7 +38,7 @@
     "load-grunt-config": "~0.16.0",
     "mongodb": "^1.4.18",
     "rutha-grunt-mongo-migrations": "^0.1.1",
-    "rutha-grunt-tasks-service": "~0.2.4",
+    "rutha-grunt-tasks-service": "~0.2.5",
     "time-grunt": "~0.4.0"
   },
   "dependencies": {
