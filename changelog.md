@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 1.0.0
+
+* Completed ES6 story roadmap for `service`. See [Babel](https://babeljs.io/docs/usage/options/) and [Typescript](http://www.typescriptlang.org/Handbook) for more.
+* Added feature toggles.
+* Bumped dependencies.
 
 #### 0.7.2
 

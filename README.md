@@ -10,7 +10,7 @@ Pure pragmatic NodeJS stack
 
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 0.7.2
+#### Last update: 1.0.0
 
 #### Docs:
 
@@ -27,7 +27,7 @@ Pure pragmatic NodeJS stack
 * **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **AngularJS 1.3.x**
 * **Hapi 8.0.0**
-* **BabelJS** for node
+* **ES6 ready** for service api layer (UI/Angular later mid 2015)
 * **Jasmine NPM**
 
 ### Additional features
