@@ -20,6 +20,8 @@ Pure pragmatic NodeJS stack
 * [Hapi Tutorials](http://hapijs.com/tutorials)
 * [BabelJS: Learn ES6](https://babeljs.io/docs/learn-es6/)
 * [ECMAScript6 by Luke Hoban](https://github.com/lukehoban/es6features)
+* [Typescript](http://www.typescriptlang.org/)
+* [Taming Angular 1.3 forms by Year of Moo](http://www.yearofmoo.com/2014/09/taming-forms-in-angularjs-1-3.html#html5-validators-and-parse-errors)
 * [Jasmine BDD Introduction](http://jasmine.github.io/2.2/introduction.html)
 
 ### Main features ###
