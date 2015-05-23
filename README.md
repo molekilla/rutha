@@ -111,7 +111,6 @@ Pure pragmatic NodeJS stack
 ## Grunt Help - Frontend tasks
 
 * `grunt serve`: Serves frontend service with no auto reload
-* `grunt autosync`: Serves frontend service with auto reload
 * `grunt spec`: Runs jshint and server side / UI specs
 * `grunt test`: Runs E2E/Functional tests (Angular)
 * `grunt build`: Prepares UI assets

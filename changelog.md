@@ -11,8 +11,13 @@ Pure pragmatic NodeJS stack
 
 #### 1.1.0
 
-* ES6: service specs folder enabled.
+* ES6: service specs folder enabled in `grunt spec`
 * Bumped dependencies (hapi, rutha-grunt-tasks-*)
+* (New - ui): Adds src/assets, which copies assets as is to dist folder
+* (New - ui): Adds src/app/fonts
+* (New - ui): Removes `grunt autosync`
+* (New - service): Included models, migrations and spec for ES6 / Typescript transpilers
+* (New - service): Included shared and service/models for JSDoc
 
 #### 1.0.0
 
