@@ -8,6 +8,11 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 1.1.0
+
+* ES6: service specs folder enabled.
+* Bumped dependencies (hapi, rutha-grunt-tasks-*)
+
 #### 1.0.0
 
 * Completed ES6 story roadmap for `service`. See [Babel](https://babeljs.io/docs/usage/options/) and [Typescript](http://www.typescriptlang.org/Handbook) for more.
