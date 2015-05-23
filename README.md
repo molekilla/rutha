@@ -1,4 +1,5 @@
-# Rutha Stack - Taming HapiJS and AngularJS #
+# rutha
+## an hapi/angular frontend and service stack
 **Ru** le 
 **T** hem 
 **H** apiJS 
