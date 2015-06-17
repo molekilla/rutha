@@ -7,6 +7,9 @@ module.exports = function(grunt) {
         configPath: path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-ui/grunt'), //path to task.js files, defaults to grunt dir
         init: true, //auto grunt.initConfig
         data: { 
+            devEnvironment: {
+                distFolder: 'www'
+            },
             deploySettings: {
               ruthaDeploy: '/home/rogelio/Code/provisioning/ruthan_deploy',
               playbook: '~/Code/provisioning/rutha_deploy/provisioning/playbook.yml',
@@ -28,7 +31,7 @@ module.exports = function(grunt) {
               }
             },
             bowerConcat: {
-              exclude: ['angular', 'jquery', 'kendo-ui-core'],
+              exclude: ['angular', 'ionic', 'kendo-ui-core'],
               dependencies: null
             },          
             nodeInspector: {

@@ -4,6 +4,10 @@ node_modules/
 logs/
 dist/
 docs/
+node_modules/
+platforms/
+plugins/
+www/
 
 # Files
 # test.pdf
