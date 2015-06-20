@@ -12,10 +12,10 @@ module.exports = {
     },
     assets: {
       method: 'GET',
-      path: '/dist/{a*}',
+      path: '/www/{a*}',
       handler: {
         directory: {
-          path: __dirname + '/../../dist'
+          path: __dirname + '/../../www'
         }
       }
     },

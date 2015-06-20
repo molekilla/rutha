@@ -9,7 +9,7 @@ angular.module('ruthaDirectives', []);
 angular.module('ruthaAuth', []);
 
 angular.module('ruthaApp',
-  ['ionic', 'ruthaAuth', 'ruthaDirectives' , 'ruthaServices', 'rutha.templates', 'ruthaControllers'])
+  ['ionic', 'restangular', 'ruthaAuth', 'ruthaDirectives' , 'ruthaServices', 'rutha.templates', 'ruthaControllers'])
 .run(function($ionicPlatform) {    
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -27,11 +27,26 @@ angular.module('ruthaApp',
       StatusBar.styleDefault();
     }
   });
-});
- 
+})
+.config(function(RestangularProvider) {
+    RestangularProvider.setFullResponse(true);
+    RestangularProvider.setBaseUrl('/api');
+})
+.config(function($stateProvider) {
+// main/login
+// main/logout
 
- 
-//.config(function(RestangularProvider) {
-//    RestangularProvider.setFullResponse(true);
-//    RestangularProvider.setBaseUrl('/api');
-//})
+  $stateProvider.
+      state('signup', {
+        url: '/signup',
+        templateUrl: 'app/main/signup.html',
+        controllerAs: 'signup',
+        controller: 'SignupController'
+      }).
+      state('login', {
+        url: '/login',
+        templateUrl: 'app/main/login.html',
+        controllerAs: 'login',
+        controller: 'LoginController'
+      });
+});

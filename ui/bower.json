@@ -2,18 +2,12 @@
   "name": "rutha_ionic",
   "dependencies": {
     "ionic": "driftyco/ionic-bower#1.0.0",
-    "angular-sanitize": "1.4.0",
-    "angular-messages": "1.4.0",
-    "underscore": "~1.7.0",
-    "restangular": "1.4.0",
-    "angular-hint": "https://github.com/angular/angular-hint"
+    "underscore": "~1.8.0",
+    "restangular": "1.4.0"
   },
   "overrides": {
     "ionic": {
       "main": "ionic.js"
-    },      
-    "angular-hint": {
-      "main": "hint.js"
     }
   },
   "version": "0.1.0",

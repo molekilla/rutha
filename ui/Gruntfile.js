@@ -31,7 +31,7 @@ module.exports = function(grunt) {
               }
             },
             bowerConcat: {
-              exclude: ['angular', 'ionic', 'kendo-ui-core'],
+              exclude: ['angular', 'ionic'],
               dependencies: null
             },          
             nodeInspector: {
