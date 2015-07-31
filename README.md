@@ -32,6 +32,7 @@ Pure pragmatic NodeJS stack
 * **Hapi 8.0.0**
 * **ES6 ready** for service api layer (UI/Angular later mid 2015)
 * **Jasmine NPM**
+* **Ionic**: Try [rutha-ionic](https://github.com/molekilla/rutha-ionic)
 
 ### Additional features
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
