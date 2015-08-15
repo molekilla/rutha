@@ -8,9 +8,6 @@
 [![Build Status](https://travis-ci.org/molekilla/rutha.svg?branch=master)](https://travis-ci.org/molekilla/rutha)
 
 Pure pragmatic NodeJS stack
-Sponsored by 
-![Autentifactor](https://avatars0.githubusercontent.com/u/12659906?v=3&s=200)
-
 #### Changelog: [changelog](changelog.md)
 
 #### Last update: 1.1.0
@@ -157,3 +154,7 @@ autentifactor
 
 ### Disclaimer ###
 Feel free to fork.
+
+### Sponsored by 
+![Autentifactor](https://avatars0.githubusercontent.com/u/12659906?v=3&s=200)
+
