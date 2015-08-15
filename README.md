@@ -8,7 +8,8 @@
 [![Build Status](https://travis-ci.org/molekilla/rutha.svg?branch=master)](https://travis-ci.org/molekilla/rutha)
 
 Pure pragmatic NodeJS stack
-Sponsored by ![Autentifactor](https://avatars0.githubusercontent.com/u/12659906?v=3&s=200)
+Sponsored by 
+![Autentifactor](https://avatars0.githubusercontent.com/u/12659906?v=3&s=200)
 
 #### Changelog: [changelog](changelog.md)
 
@@ -151,8 +152,8 @@ server {
 ```
 
 ### Maintainers, notes ###
-Maintain by Rogelio Morrell C. 
-Pull Request are welcome but I might not turn around those quickly. 
+Rogelio Morrell C. 
+autentifactor
 
 ### Disclaimer ###
 Feel free to fork.
