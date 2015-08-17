@@ -5,7 +5,7 @@ module.exports = function (grunt) {
             debugPort: 5858
         },
         nodemon: {
-            args: ['--debug']
+            args: []
         },
 //        es6: {
 //            transpiler: 'babel',
