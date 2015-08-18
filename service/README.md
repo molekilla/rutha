@@ -23,7 +23,6 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 * **Specs and Functional Tests (Frontend)**: Based partially on [year of moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html) 
 * **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
-* **Lout module** for [API docs](https://github.com/spumko/lout) by default
 
 ### Grunt Help (Service) ###
 

@@ -10,7 +10,7 @@
 Pure pragmatic NodeJS stack
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 1.1.0
+#### Last update: 1.2.0
 
 #### Docs:
 
@@ -28,18 +28,16 @@ Pure pragmatic NodeJS stack
 
 * **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **AngularJS 1.3.x**
-* **Hapi 8.0.0**
+* **Hapi 9.0.0**
 * **ES6 ready** for service api layer (UI/Angular later mid 2015)
 * **Jasmine NPM**
 * **Ionic**: Try [rutha-ionic](https://github.com/molekilla/rutha-ionic)
 
 ### Additional features
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
-* **BrowserSync**: Choose this because it was painless to configure
 * **Underscore for frontend server side templates**: To avoid issues with AngularJS.
 * [Grunt ngAnnotate](https://github.com/mzgol/grunt-ng-annotate)
 * [Grunt Angular Templates](https://github.com/ericclemmons/grunt-angular-templates)
-* [Grunt  Wiredep](https://github.com/stephenplusplus/grunt-wiredep)
 * **Specs and Functional Tests (Frontend)**: Based partially on [year of moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html) 
 * **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default

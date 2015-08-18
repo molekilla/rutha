@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "bell": "^5 .0.0",
+    "bell": "^5.0.0",
     "boom": "^2.8.0",
     "debug": "~2.1.0",
     "hapi": "~9.0.0",
