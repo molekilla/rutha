@@ -4,6 +4,9 @@ var RuthaUtils = require('rutha-utils');
 var routes = require('./routes');
 var MongooseHandler = require('rutha-utils/mongoose');
 var Mongoose = require('mongoose');
+// Hapi 9.x !
+var Inert = require('inert');
+
 
 var config = RuthaUtils.createConfig({
   path: {
@@ -38,18 +41,6 @@ canned.connection({
     port: 9002
 });
 
-// views
-server.views(viewOptions);
-canned.views(viewOptions);
-
-// statics
-server.route(routes.assets);
-canned.route(routes.assets);
-
-// health check
-server.route(routes.health);
-canned.route(routes.health);
-
 var compiler = function(template, options) {
   return require('underscore').template(template, options || { });
 };
@@ -83,9 +74,21 @@ var cannedControllers = [
 function LoadServer(server, controllers) {
   server.register([
     require('hapi-auth-cookie'),
-    require('bell')
+    require('bell'),
+    require('vision'),
+    Inert
     ], function(err) {
 
+
+    // views
+    server.views(viewOptions);
+
+    // statics
+    server.route(routes.assets);
+
+    // health check
+    server.route(routes.health);
+      
     server.auth.strategy('facebook', 'bell', {
         provider: 'facebook',
         password: 'some password',

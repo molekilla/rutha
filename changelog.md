@@ -9,6 +9,13 @@ Pure pragmatic NodeJS stack
 
 ### Changelog ###
 
+#### 1.2.0
+
+* NodeJS: Updated dependencies to make it work for NodeJS 0.12.x
+* Service: Bumped dependencies, hapi to 8.8.1, hapi-swagger to 0.8.2 and ES6 tasks (grunt-ts and grunt-babel)
+* UI: Migrated to hapi 9.x
+* UI: Removed lib/hapi/server.js
+
 #### 1.1.0
 
 * ES6: service specs folder enabled in `grunt spec`
