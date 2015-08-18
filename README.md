@@ -54,7 +54,7 @@ Pure pragmatic NodeJS stack
 ## Installing
 1. Clone repo
 2. Rename text containing `rutha` to `your_app_name`
-3. Be sure to have node 0.10.32 or greater (e.g. nvm use 0.10.32)
+3. Be sure to have node 0.12.6 or greater (e.g. nvm use 0.12.6)
 4. Run `npm install grunt-cli -g`
 5. Change dir to ui and run `npm install` and then `bower install`
 6. Open a new tab and change dir to service and run `npm install`
