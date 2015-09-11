@@ -1,9 +1,13 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 
 'use strict';
-import "angular";
+
+import angular from 'angular';
+import 'underscore';
 import 'angular-route';
 import 'restangular';
+import 'templates';
+
 
 angular.module('ruthaControllers', []);
 angular.module('ruthaServices', []);
@@ -23,19 +27,19 @@ angular.module('ruthaApp',
 
   $routeProvider.
       when('/signup', {
-        templateUrl: 'app/main/signup.html',
+        templateUrl: 'main/signup.html',
         controllerAs: 'signup',
         controller: 'SignupController'
       }).
       when('/login', {
-        templateUrl: 'app/main/login.html',
+        templateUrl: 'main/login.html',
         controllerAs: 'login',
         controller: 'LoginController'
       }).
       otherwise({
           controller : 'TestController',
           controllerAs: 'main',
-          templateUrl: 'app/main/index.html'
+          templateUrl: 'main/index.html'
       });
 });
 
