@@ -1,13 +1,14 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 
 'use strict';
-
-import angular from 'angular';
+import index from 'html/src/app/main/index.html!text';
+//import angular from 'angular';
+import 'angular';
 import 'underscore';
 import 'angular-route';
 import 'restangular';
-import 'templates';
-
+//import 'templates';
+import TestController from './main/index';
 
 angular.module('ruthaControllers', []);
 angular.module('ruthaServices', []);
@@ -37,9 +38,9 @@ angular.module('ruthaApp',
         controller: 'LoginController'
       }).
       otherwise({
-          controller : 'TestController',
+          controller : TestController,
           controllerAs: 'main',
-          templateUrl: 'main/index.html'
+          template: index
       });
 });
 

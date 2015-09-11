@@ -9,10 +9,11 @@ var gulp = require('gulp');
 var livereload = require('gulp-livereload');
 
 var tsProject = ts.createProject({
-                    module: 'system',
-                    sourceMap: false,
-                    fast: 'never',
-                    emitDecoratorMetadata: true
+"declaration": false,
+		"module": "system",
+		"target": "es5",
+		"noImplicitAny": false,
+		"experimentalDecorators": true
 });
 
 gulp.task('typescript', function() {
