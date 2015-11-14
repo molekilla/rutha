@@ -1,8 +1,8 @@
 {
   "name": "rutha_stack",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "main": "ui/lib/hapi/server.js",
-  "description": "Rutha Dev Stack",
+  "description": "rutha stack",
   "scripts": {
     "test": "grunt spec --gruntfile ui/Gruntfile.js && grunt spec --gruntfile service/Gruntfile.js"
   },
@@ -12,12 +12,12 @@
     "url": "git://github.com/molekilla/rutha.git"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.2.1"
   },  
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "hapi": "^8.5.0",
-    "hapi-auth-bearer-token": "^3.1.0"
+    "hapi": "^10.5.0",
+    "hapi-auth-bearer-token": "^3.1.1"
   }
 }

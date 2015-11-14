@@ -1,7 +1,7 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "1.2.0",
-  "description": "Rutha Front End",
+  "version": "2.0.0",
+  "description": "rutha ui",
   "main": "lib/hapi/index.js",
   "scripts": {
     "start": "node lib/hapi/index.js",
@@ -14,7 +14,7 @@
     "url": "git://github.com/molekilla/rutha.git"
   },
   "engines": {
-    "node": ">=0.12.6"
+    "node": ">=4.2.1"
   },
   "license": "MIT",
   "devDependencies": {
@@ -35,12 +35,12 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-jasmine-node": "~0.2.1",
     "grunt-jsdoc": "^0.6.2",
-    "grunt-karma": "^0.9.0",
+    "grunt-karma": "^0.12.1",
     "grunt-ng-annotate": "~0.9.2",
     "grunt-ngdocs": "^0.2.6",
-    "grunt-node-inspector": "~0.1.6",
-    "grunt-nodemon": "~0.2.1",
-    "grunt-nsp-package": "0.0.5",
+    "grunt-node-inspector": "~0.4.1",
+    "grunt-nodemon": "~0.4.0",
+    "grunt-nsp": "*",
     "grunt-preprocess": "^4.1.0",
     "grunt-protractor-runner": "^1.1.0",
     "grunt-shell": "^1.1.1",
@@ -48,7 +48,7 @@
     "jasmine-node": "~2.0.0",
     "jit-grunt": "~0.9.0",
     "jshint-stylish": "^1.0.0",
-    "karma": "^0.12.17",
+    "karma": "^0.13.0",
     "karma-chrome-launcher": "^0.1.4",
     "karma-firefox-launcher": "^0.1.3",
     "karma-jasmine": "^0.1.5",
@@ -62,15 +62,17 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bell": "^5.0.0",
-    "boom": "^2.8.0",
-    "debug": "~2.1.0",
-    "hapi": "~9.0.0",
+    "boom": "^3.0.0",
+    "debug": "^2.2.0",
+    "good": "^6.4.0",
+    "good-console": "^5.2.0",
+    "hapi": "~10.5.0",
     "hapi-auth-cookie": "^3.1.0",
-    "inert": "^3.0.1",
-    "joi": "^6.6.1",
-    "mongoose": "^4.0.1",
+    "inert": "^3.2.0",
+    "joi": "7.0.0",
+    "mongoose": "^4.2.4",
     "rutha-utils": "^1.1.0",
     "underscore": "^1.8.0",
-    "vision": "^3.0.0"
+    "vision": "^4.0.0"
   }
 }

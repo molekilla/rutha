@@ -70,13 +70,32 @@ var cannedControllers = [
   }
 ];
 
+var logOptions = {
+    reporters: [{
+            reporter: require('good-console'),
+            events: {hapi: '*', log: '*', response: '*',  error: '*', 'request': '*' }
+        }]
+}
+
 // we need to include it here, to allow specs to work (module.parent)
 function LoadServer(server, controllers) {
   server.register([
-    require('hapi-auth-cookie'),
-    require('bell'),
-    require('vision'),
-    Inert
+      {
+          register: require('hapi-auth-cookie')
+      },
+      {
+          register: require('bell')
+      },
+      {
+          register: require('vision')
+      },
+      {
+          register: Inert
+      },
+    {
+        register: require('good'),
+        options: logOptions
+    }
     ], function(err) {
 
 

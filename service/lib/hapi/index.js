@@ -44,10 +44,27 @@ var controllers = [
   }
 ];
 
+var logOptions = {
+    reporters: [{
+            reporter: require('good-console'),
+            events: {hapi: '*', log: '*', response: '*',  error: '*', 'request': '*' }
+        }]
+};
+
 var serverPlugins = [
   {
     register: require('hapi-auth-bearer-token')    
   },
+    {
+      register: require('vision')
+    },
+    {
+      register: require('inert')
+    },
+    {
+        register: require('good'),
+        options: logOptions
+    },    
   {
     register: require('hapi-swagger'),
     options:

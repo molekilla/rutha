@@ -1,13 +1,15 @@
 # rutha
 ## an hapi/angular frontend and service stack
-**Ru** le 
-**T** hem 
-**H** apiJS 
-**A** ngularJS
-
-Pure pragmatic NodeJS stack
 
 ### Changelog ###
+
+
+#### 2.0.0
+
+* NodeJS: Updated dependencies to make it work for NodeJS 4.2.x
+* Service: Migrated to hapi 10.x
+* UI: Migrated to hapi 10.x
+
 
 #### 1.2.0
 

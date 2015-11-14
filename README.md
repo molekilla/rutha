@@ -1,16 +1,13 @@
 # rutha
 ## an hapi/angular frontend and service stack
-**Ru** le 
-**T** hem 
-**H** apiJS 
-**A** ngularJS
+
 
 [![Build Status](https://travis-ci.org/molekilla/rutha.svg?branch=master)](https://travis-ci.org/molekilla/rutha)
 
 Pure pragmatic NodeJS stack
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 1.2.0
+#### Last update: 2.0.0
 
 #### Docs:
 
@@ -28,8 +25,7 @@ Pure pragmatic NodeJS stack
 
 * **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
 * **AngularJS 1.3.x**
-* **Hapi 9.0.0**
-* **ES6 ready** for service api layer (UI/Angular later mid 2015)
+* **Hapi 10.0.0**
 * **Jasmine NPM**
 * **Ionic**: Try [rutha-ionic](https://github.com/molekilla/rutha-ionic)
 
@@ -39,22 +35,19 @@ Pure pragmatic NodeJS stack
 * [Grunt ngAnnotate](https://github.com/mzgol/grunt-ng-annotate)
 * [Grunt Angular Templates](https://github.com/ericclemmons/grunt-angular-templates)
 * **Specs and Functional Tests (Frontend)**: Based partially on [year of moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html) 
-* **Frontend** [Todd Motto's](http://toddmotto.com/opinionated-angular-js-styleguide-for-teams/) AngularJS guideline: I also based some ideas on [PackPub's Angular Book](http://www.packtpub.com/angularjs-web-application-development/book?tag=dp/masteringwebwithangularjs-abr1/0913)
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
-* **Lout module** for [API docs](https://github.com/spumko/lout) by default
 * [Chris Sevilleja's 'Easy Node authentication' local and facebook sample code for HapiJS](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)
 * Basic cssmin task
-* `grunt-nsp-package` support
+* `grunt-nsp` support
 * [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/)
 * Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
-* [Angular Hint](https://github.com/angular/angular-hint)
 * [Hapi Swagger](https://github.com/glennjones/hapi-swagger)
 * [Grunt JSDoc3](https://github.com/krampstudio/grunt-jsdoc)
 
 ## Installing
 1. Clone repo
 2. Rename text containing `rutha` to `your_app_name`
-3. Be sure to have node 0.12.6 or greater (e.g. nvm use 0.12.6)
+3. Be sure to have node 4.2.1 or greater (e.g. nvm use 4.2.1)
 4. Run `npm install grunt-cli -g`
 5. Change dir to ui and run `npm install` and then `bower install`
 6. Open a new tab and change dir to service and run `npm install`
@@ -148,11 +141,7 @@ server {
 
 ### Maintainers, notes ###
 Rogelio Morrell C. 
-autentifactor
 
 ### Disclaimer ###
 Feel free to fork.
-
-### Sponsored by 
-![Autentifactor](https://avatars0.githubusercontent.com/u/12659906?v=3&s=200)
 
