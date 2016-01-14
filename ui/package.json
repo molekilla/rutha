@@ -1,10 +1,13 @@
 {
   "name": "rutha_stack_frontend",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "rutha ui",
   "main": "lib/hapi/index.js",
   "scripts": {
-    "start": "node lib/hapi/index.js",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "copy": "cp -a src/app/. dist",
+    "start": "concurrent \"npm run copy\" \"grunt nodemon\" \"npm run tsc:w\" \"grunt watch\"  ",
     "test": "grunt test",
     "postinstall": "grunt postinstall"
   },
@@ -19,6 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "concat": "~1.0.0",
+    "concurrently": "^1.0.0",
     "grunt": "~0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-babel": "^5.0.1",
@@ -57,7 +61,8 @@
     "ng-annotate": "~0.14.1",
     "protractor": "^1.0.0",
     "rutha-grunt-tasks-ui": "^0.4.9",
-    "time-grunt": "~1.0.0"
+    "time-grunt": "~1.0.0",
+    "typescript": "^1.7.5"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -66,7 +71,7 @@
     "debug": "^2.2.0",
     "good": "^6.4.0",
     "good-console": "^5.2.0",
-    "hapi": "~10.5.0",
+    "hapi": "~12.0.0",
     "hapi-auth-cookie": "^3.1.0",
     "inert": "^3.2.0",
     "joi": "7.0.0",

@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     var path = require('path');
     var RuthaGruntUI = require('rutha-grunt-tasks-ui')(grunt);
 
@@ -6,31 +6,31 @@ module.exports = function(grunt) {
     require('load-grunt-config')(grunt, {
         configPath: path.join(process.cwd(), 'node_modules/rutha-grunt-tasks-ui/grunt'), //path to task.js files, defaults to grunt dir
         init: true, //auto grunt.initConfig
-        data: { 
+        data: {
             deploySettings: {
-              ruthaDeploy: '/home/rogelio/Code/provisioning/ruthan_deploy',
-              playbook: '~/Code/provisioning/rutha_deploy/provisioning/playbook.yml',
-              hosts: {
-                production: {
-                  name: 'aws',
-                  sshKey: 'fill_here',
-                  remoteUser: 'ubuntu'
-                },
-                staging: {
-                  name: 'staging',
-                  sshKey: 'fill_here',
-                  remoteUser: 'ubuntu'
-                },
-                vagrant: {
-                  name: 'all',
-                  remoteUser: 'vagrant'
+                ruthaDeploy: '/home/rogelio/Code/provisioning/ruthan_deploy',
+                playbook: '~/Code/provisioning/rutha_deploy/provisioning/playbook.yml',
+                hosts: {
+                    production: {
+                        name: 'aws',
+                        sshKey: 'fill_here',
+                        remoteUser: 'ubuntu'
+                    },
+                    staging: {
+                        name: 'staging',
+                        sshKey: 'fill_here',
+                        remoteUser: 'ubuntu'
+                    },
+                    vagrant: {
+                        name: 'all',
+                        remoteUser: 'vagrant'
+                    }
                 }
-              }
             },
             bowerConcat: {
-              exclude: ['angular', 'jquery', 'kendo-ui-core'],
-              dependencies: null
-            },          
+                exclude: ['angular', 'jquery', 'system.js'],
+                dependencies: null
+            },
             nodeInspector: {
                 webPort: 8082,
                 debugPort: 5859
@@ -50,13 +50,13 @@ module.exports = function(grunt) {
             cwd: process.cwd(),
             pkg: grunt.file.readJSON('package.json')
         },
-        jitGrunt: { 
-          staticMappings: {
-            protractor: 'grunt-protractor-runner',
-            ngAnnotate: 'grunt-ng-annotate',
-            ngtemplates: 'grunt-angular-templates',
-            'validate-package': 'grunt-nsp-package'
-          }
+        jitGrunt: {
+            staticMappings: {
+                protractor: 'grunt-protractor-runner',
+                ngAnnotate: 'grunt-ng-annotate',
+                ngtemplates: 'grunt-angular-templates',
+                'validate-package': 'grunt-nsp-package'
+            }
         }
     });
 

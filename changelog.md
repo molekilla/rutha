@@ -3,6 +3,10 @@
 
 ### Changelog ###
 
+#### 2.1.0
+
+* Service: Migrated to hapi 12.x
+* UI: Migrated to hapi 12.x
 
 #### 2.0.0
 
