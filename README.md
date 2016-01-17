@@ -1,6 +1,7 @@
 # rutha
 ## an hapi/angular frontend and service stack
 
+For an ES6 version: Take a look at [rutha 2016](https://github.com/molekilla/rutha-2016)
 
 [![Build Status](https://travis-ci.org/molekilla/rutha.svg?branch=master)](https://travis-ci.org/molekilla/rutha)
 
