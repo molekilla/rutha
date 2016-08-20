@@ -28,7 +28,6 @@ After years of dealing with Sinatra (Ruby) and Backbone, and a brief ExpressJS s
 
 * `npm start`: Serves API service
 * `npm test`: Runs Jasmine NPM specs
-* `grunt coverage`: Runs Istanbul code coverage. Outputs HTML reports to `test/coverage/reports`
 * `npm run nsp`: Verifies modules that contains security issues
 * `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
 * `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)

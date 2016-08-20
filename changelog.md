@@ -6,8 +6,9 @@
 #### 2.1.0
 
 * Updated dependencies
-* Service: Migrated to hapi 14.x
-* UI: Migrated to hapi 14.x
+* Service: Migrated to hapi 13.x
+* UI: Migrated to hapi 13.x
+* Removed grunt ts and babel tasks,  use Typescript with tsconfig instead.
 
 #### 2.0.0
 
