@@ -3,13 +3,17 @@
 
 ### Changelog ###
 
+#### 2.1.0
+
+* Updated dependencies
+* Service: Migrated to hapi 14.x
+* UI: Migrated to hapi 14.x
 
 #### 2.0.0
 
 * NodeJS: Updated dependencies to make it work for NodeJS 4.2.x
 * Service: Migrated to hapi 10.x
 * UI: Migrated to hapi 10.x
-
 
 #### 1.2.0
 
