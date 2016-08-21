@@ -28,9 +28,10 @@ module.exports = function(grunt) {
               }
             },
             bowerConcat: {
-              exclude: ['angular', 'jquery'],
+              exclude: ['angulara', 'jquery'],
               dependencies: null
             },          
+            devEnvironment: {},
             nodeInspector: {
                 webPort: 8082,
                 debugPort: 5859

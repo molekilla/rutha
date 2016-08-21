@@ -70,12 +70,18 @@ var cannedControllers = [
   }
 ];
 
-var logOptions = {
-    reporters: [{
-            reporter: require('good-console'),
-            events: {hapi: '*', log: '*', response: '*',  error: '*', 'request': '*' }
-        }]
-}
+const logOptions = {
+    reporters: {
+        consoleLog: [{
+            module: 'good-squeeze',
+            name: 'Squeeze',
+            args: [{hapi: '*', log: '*', response: '*',  error: '*', 'request': '*' }]
+        }, {
+            module: 'good-console'
+        }, 'stdout'],
+    }
+};
+
 
 // we need to include it here, to allow specs to work (module.parent)
 function LoadServer(server, controllers) {

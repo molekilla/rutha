@@ -39,7 +39,7 @@
     "grunt-ngdocs": "^0.2.6",
     "grunt-node-inspector": "~0.4.2",
     "grunt-nodemon": "~0.4.2",
-    "grunt-nsp": "*",
+    "nsp": "*",
     "grunt-preprocess": "^4.1.0",
     "grunt-protractor-runner": "^1.1.0",
     "grunt-shell": "^1.1.1",
@@ -55,7 +55,7 @@
     "load-grunt-config": "~0.16.0",
     "ng-annotate": "~0.14.1",
     "protractor": "^1.0.0",
-    "rutha-grunt-tasks-ui": "^0.4.9",
+    "rutha-grunt-tasks-ui": "^1.2.0",
     "time-grunt": "~1.1.0"
   },
   "dependencies": {
