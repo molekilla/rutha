@@ -5,8 +5,7 @@ angular.module('rutha.templates').run(['$templateCache', function($templateCache
     "      <div class=\"page-header\">\n" +
     "        <h1>Hello Hejsan Hola Rutha!</h1>\n" +
     "      </div>\n" +
-    "      <p class=\"lead\">Hello HapiJS, meet AngularJS !!!</p>\n" +
-    "            <input kendo-date-picker />"
+    "      <p class=\"lead\">Hello HapiJS, meet AngularJS !!!</p>"
   );
 
 

@@ -28,7 +28,7 @@ module.exports = function(grunt) {
               }
             },
             bowerConcat: {
-              exclude: ['angulara', 'jquery'],
+              exclude: ['jquery'],
               dependencies: null
             },          
             devEnvironment: {},

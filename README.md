@@ -8,7 +8,7 @@ For an ES6 version: Take a look at [rutha 2016](https://github.com/molekilla/rut
 Pure pragmatic NodeJS stack
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 2.0.0
+#### Last update: 2.1.0
 
 #### Docs:
 
@@ -66,15 +66,15 @@ Pure pragmatic NodeJS stack
 
 ## Grunt Help - Frontend tasks
 
-* `grunt serve`: Serves frontend service with no auto reload
-* `grunt spec`: Runs jshint and server side / UI specs
+* `npm start`: Serves frontend
+* `npm test`: Runs Jasmine NPM specs
+* `npm run nsp`: Verifies modules that contains security issues
 * `grunt test`: Runs E2E/Functional tests (Angular)
 * `grunt build`: Prepares UI assets
 * `grunt stagelocal`: Provisions Vagrant VM
 * `grunt staging`: Provisions staging
 * `grunt deploy`: Provisions production
 * `grunt jshinting`: Verifies javascript using jshint
-* `grunt auditpkg`: Verifies modules that contains security issues
 
 ###  About Angular Tests
 `ui/src/test/lib` contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)

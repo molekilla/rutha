@@ -70,7 +70,7 @@ var cannedControllers = [
   }
 ];
 
-const logOptions = {
+var logOptions = {
     reporters: {
         consoleLog: [{
             module: 'good-squeeze',
