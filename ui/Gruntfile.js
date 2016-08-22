@@ -28,9 +28,10 @@ module.exports = function(grunt) {
               }
             },
             bowerConcat: {
-              exclude: ['angular', 'jquery', 'kendo-ui-core'],
+              exclude: ['jquery'],
               dependencies: null
             },          
+            devEnvironment: {},
             nodeInspector: {
                 webPort: 8082,
                 debugPort: 5859
@@ -55,7 +56,7 @@ module.exports = function(grunt) {
             protractor: 'grunt-protractor-runner',
             ngAnnotate: 'grunt-ng-annotate',
             ngtemplates: 'grunt-angular-templates',
-            'validate-package': 'grunt-nsp-package'
+            'validate-package': 'grunt-nsp'
           }
         }
     });

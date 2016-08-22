@@ -1,21 +1,21 @@
-var Hapi = require('hapi');
-var Boom = require('boom');
-var debug = require('debug')('api:main');
-var RuthaUtils = require('rutha-utils');
-var MongooseHandler = require('rutha-utils/mongoose');
-var Mongoose = require('mongoose');
+const Hapi = require('hapi');
+const Boom = require('boom');
+const debug = require('debug')('api:main');
+const RuthaUtils = require('rutha-utils');
+const MongooseHandler = require('rutha-utils/mongoose');
+const Mongoose = require('mongoose');
 
-var config = RuthaUtils.createConfig({
+const config = RuthaUtils.createConfig({
   path: {
     config: __dirname + '/../../config'
   }
 }).load();
 
-var logger = RuthaUtils.createLogger({
+const logger = RuthaUtils.createLogger({
   filename: config.get('logger:filename')
 });
 
-var client = Mongoose.connect(config.get('mongodb:connectionString'));
+const client = Mongoose.connect(config.get('mongodb:connectionString'));
 MongooseHandler.bindEvents(client);
 MongooseHandler.bindModels({
     mongoose: client,
@@ -24,7 +24,7 @@ MongooseHandler.bindModels({
 
 
 // Create a server with a host and port
-var server = module.exports = new Hapi.Server();
+const server = module.exports = new Hapi.Server();
 server.connection({
     host: config.get('apiServer:host'),
     port: config.get('apiServer:port')
@@ -38,17 +38,22 @@ server.app = {
 };
 
 // add server methods to IoC mongoose models
-var controllers = [
+const controllers = [
   {
     register: require('../controllers/users'),
   }
 ];
 
-var logOptions = {
-    reporters: [{
-            reporter: require('good-console'),
-            events: {hapi: '*', log: '*', response: '*',  error: '*', 'request': '*' }
-        }]
+const logOptions = {
+    reporters: {
+        consoleLog: [{
+            module: 'good-squeeze',
+            name: 'Squeeze',
+            args: [{hapi: '*', log: '*', response: '*',  error: '*', 'request': '*' }]
+        }, {
+            module: 'good-console'
+        }, 'stdout'],
+    }
 };
 
 var serverPlugins = [
@@ -69,22 +74,22 @@ var serverPlugins = [
     register: require('hapi-swagger'),
     options:
     {
-      basePath: 'http://localhost:' + config.get('apiServer:port'),
-      apiVersion: '1.0',
+      host: 'localhost:' + config.get('apiServer:port'),
+      basePath: '/api',
       documentationPath: '/api_docs',
-      endpoint: '/rest_docs',
-      authorizations: {
-        token: {
-            type: "apiKey",
-            passAs: "header",
-            keyname: "authentication"
-        }
-      },
+      // endpoint: '/rest_docs',
+      // auth: {
+      //   token: {
+      //       type: "apiKey",
+      //       passAs: "header",
+      //       keyname: "authentication"
+      //   }
+      // },
       info: {
         title: 'Rutha REST API Documentation',
+        version: '1.0',
         description: 'REST API Docs.',
-        contact: 'molekilla@gmail.com',
-        license: 'MIT'
+        license: { name: 'MIT' }
       }
     }
   }

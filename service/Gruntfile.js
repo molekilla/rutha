@@ -7,6 +7,7 @@ module.exports = function (grunt) {
         nodemon: {
             args: []
         },
+// Deprecated !!!
 //        es6: {
 //            transpiler: 'babel',
 //            options: {
@@ -40,7 +41,7 @@ module.exports = function (grunt) {
                 instrument: 'grunt-istanbul',
                 storeCoverage: 'grunt-istanbul',
                 makeReport: 'grunt-istanbul',
-                'validate-package': 'grunt-nsp-package'
+                'validate-package': 'grunt-nsp'
             }
         }
     });

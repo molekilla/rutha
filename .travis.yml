@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "4.2"
+  - "4.4"
 services:
   - mongodb
 env:
@@ -12,13 +12,8 @@ before_install:
   - npm install -g grunt-cli
   - npm install -g bower
 install:
-  - cd $UI
-  - npm install
-  - bower install
-  - cd ..
   - cd $API
   - npm install
-  - cd ..
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start

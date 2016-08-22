@@ -5,7 +5,7 @@ angular.module('rutha.templates', []);
 angular.module('ruthaDirectives', []);
 angular.module('ruthaAuth', []);
 angular.module('ruthaApp',
-  ['ui', 'ngRoute', 'restangular', 'ruthaAuth', 'ruthaDirectives' , 'ruthaServices', 'rutha.templates', 'ruthaControllers', 'ui.bootstrap','kendo.directives'])
+  ['ui', 'ngRoute', 'restangular', 'ruthaAuth', 'ruthaDirectives' , 'ruthaServices', 'rutha.templates', 'ruthaControllers', 'ui.bootstrap'])
 .config(function(RestangularProvider) {
     RestangularProvider.setFullResponse(true);
     RestangularProvider.setBaseUrl('/api');

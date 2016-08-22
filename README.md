@@ -8,7 +8,7 @@ For an ES6 version: Take a look at [rutha 2016](https://github.com/molekilla/rut
 Pure pragmatic NodeJS stack
 #### Changelog: [changelog](changelog.md)
 
-#### Last update: 2.0.0
+#### Last update: 2.1.0
 
 #### Docs:
 
@@ -25,8 +25,8 @@ Pure pragmatic NodeJS stack
 ### Main features ###
 
 * **Rule Them All with a single environment**: Both development and production environment are the same. We concat, annotate, mix some ingredients and offer you the same production environment for development.
-* **AngularJS 1.3.x**
-* **Hapi 10.0.0**
+* **AngularJS 1.5.x**
+* **Hapi 13.0.0**
 * **Jasmine NPM**
 * **Ionic**: Try [rutha-ionic](https://github.com/molekilla/rutha-ionic)
 
@@ -48,12 +48,66 @@ Pure pragmatic NodeJS stack
 ## Installing
 1. Clone repo
 2. Rename text containing `rutha` to `your_app_name`
-3. Be sure to have node 4.2.1 or greater (e.g. nvm use 4.2.1)
+3. Be sure to have node 4.5.0 or greater (e.g. nvm use 4.5.0)
 4. Run `npm install grunt-cli -g`
 5. Change dir to ui and run `npm install` and then `bower install`
 6. Open a new tab and change dir to service and run `npm install`
 
-## Deploying rutha apps with rutha_deploy ##
+
+### Grunt Help (Service) ###
+
+* `npm start`: Serves API service
+* `npm test`: Runs Jasmine NPM specs
+* `npm run nsp`: Verifies modules that contains security issues
+* `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
+* `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)
+* `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
+* `grunt docs`: Builds jsdoc3 documentation.
+
+## Grunt Help - Frontend tasks
+
+* `npm start`: Serves frontend
+* `npm test`: Runs Jasmine NPM specs
+* `npm run nsp`: Verifies modules that contains security issues
+* `grunt test`: Runs E2E/Functional tests (Angular)
+* `grunt build`: Prepares UI assets
+* `grunt stagelocal`: Provisions Vagrant VM
+* `grunt staging`: Provisions staging
+* `grunt deploy`: Provisions production
+* `grunt jshinting`: Verifies javascript using jshint
+
+###  About Angular Tests
+`ui/src/test/lib` contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)
+
+### Nginx routes (Optional) ###
+
+```
+server { 
+# simple reverse-proxy for Rutha (Very useful!)
+    listen       80;
+    server_name  localhost;
+    access_log   dev.log;
+    #error_page   http://here;
+
+  location /api {
+    proxy_pass      http://127.0.0.1:3002;
+    proxy_redirect  default;
+    proxy_set_header Host $host;
+  }
+
+  location / {
+    proxy_pass      http://127.0.0.1:3005;
+    proxy_redirect  default;
+    proxy_set_header Host $host;
+  }
+}
+
+```
+
+## Ansible deploy
+
+
+### Deploying rutha apps with rutha_deploy ##
 
 1. Run `grunt build` to generate frontend assets
 2. Add zip file to commit e.g. git add releases/v0.1.0.zip. 
@@ -87,58 +141,6 @@ Pure pragmatic NodeJS stack
 
 1. Copy service directory or get from repo
 3. In your devops workflow, run service/lib/hapi/index.js 
-
-
-## Grunt Help - Service tasks
-
-* `grunt serve`: Serves API service
-* `grunt spec`: Runs Jasmine 2.0 specs
-* `grunt coverage`: Runs Istanbul code coverage. Outputs HTML reports to `test/coverage/reports`
-* `grunt auditpkg`: Verifies modules that contains security issues
-* `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
-* `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)
-* `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
-* `grunt docs`: Builds jsdoc3 documentation.
-
-## Grunt Help - Frontend tasks
-
-* `grunt serve`: Serves frontend service with no auto reload
-* `grunt spec`: Runs jshint and server side / UI specs
-* `grunt test`: Runs E2E/Functional tests (Angular)
-* `grunt build`: Prepares UI assets
-* `grunt stagelocal`: Provisions Vagrant VM
-* `grunt staging`: Provisions staging
-* `grunt deploy`: Provisions production
-* `grunt jshinting`: Verifies javascript using jshint
-* `grunt auditpkg`: Verifies modules that contains security issues
-
-###  About Angular Tests
-`ui/src/test/lib` contains libs require for testing. Scope.SafeApply can be added as optional (see yearofmoo blog post)
-
-### Nginx routes (Optional) ###
-
-```
-server { 
-# simple reverse-proxy for Rutha (Very useful!)
-    listen       80;
-    server_name  localhost;
-    access_log   dev.log;
-    #error_page   http://here;
-
-  location /api {
-    proxy_pass      http://127.0.0.1:3002;
-    proxy_redirect  default;
-    proxy_set_header Host $host;
-  }
-
-  location / {
-    proxy_pass      http://127.0.0.1:3005;
-    proxy_redirect  default;
-    proxy_set_header Host $host;
-  }
-}
-
-```
 
 ### Maintainers, notes ###
 Rogelio Morrell C. 

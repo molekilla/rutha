@@ -1,11 +1,12 @@
 {
   "name": "rutha_stack_service",
-  "version": "1.2.0",
+  "version": "2.1.0",
   "description": "Rutha REST API Service",
   "main": "lib/hapi/index.js",
   "scripts": {
-    "start": "node lib/hapi/index.js",
-    "test": "grunt spec"
+    "start": "grunt serve",
+    "test": "grunt spec",
+    "nsp": "./node_modules/nsp/bin/nsp check ;exit 0"
   },
   "author": "Rogelio Morrell",
   "repository": {
@@ -13,48 +14,47 @@
     "url": "git://github.com/molekilla/rutha.git"
   },
   "engines": {
-    "node": ">=4.2.1"
+    "node": ">4.4.0"
   },
   "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-babel": "^5.0.1",
     "grunt-concurrent": "~0.5.0",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-jshint": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-env": "~0.4.1",
-    "grunt-istanbul": "0.6.0",
-    "grunt-jasmine-node": "~0.2.1",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-env": "~0.4.4",
+    "grunt-istanbul": "0.7.1",
+    "grunt-jasmine-node": "~0.3.1",
     "grunt-jsdoc": "^0.6.2",
-    "grunt-node-inspector": "~0.4.1",
-    "grunt-nodemon": "~0.4.0",
-    "grunt-nsp": "*",
+    "grunt-node-inspector": "0.4.2",
+    "grunt-nodemon": "0.4.2",
     "grunt-shell": "^1.1.1",
-    "grunt-ts": "^4.2.0",
-    "jasmine": "^2.2.1",
-    "jit-grunt": "~0.9.1",
+    "jasmine": "^2.4.1",
+    "jit-grunt": "0.10.0",
     "load-grunt-config": "~0.16.0",
     "mongodb": "^1.4.18",
+    "nsp": "^2.6.1",
     "rutha-grunt-mongo-migrations": "^0.1.1",
-    "rutha-grunt-tasks-service": "~0.3.2",
+    "rutha-grunt-tasks-service": "~0.3.3",
     "time-grunt": "~1.1.0"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "boom": "3.0.0",
+    "boom": "3.2.2",
     "debug": "~2.2.0",
-    "good": "^6.4.0",
-    "good-console": "^5.2.0",
-    "hapi": "^10.5.0",
-    "hapi-auth-bearer-token": "3.1.1",
-    "hapi-swagger": "^2.2.3",
-    "inert": "^3.2.0",
-    "joi": "7.0.0",
-    "mongoose": "^4.2.5",
+    "good": "^7.0.0",
+    "good-console": "^6.1.2",
+    "good-squeeze": "^4.0.0",    
+    "hapi": "^13.0.0",
+    "hapi-auth-bearer-token": "4.2.1",
+    "hapi-swagger": "^4.3.0",
+    "inert": "4.0.1",
+    "joi": "9.0.4",
+    "mongoose": "^4.5.9",
     "rutha-utils": "^1.1.0",
     "underscore": "~1.8.0",
-    "vision": "^4.0.1"
+    "vision": "^4.1.0"
   }
 }
