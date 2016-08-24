@@ -10,6 +10,10 @@ Pure pragmatic NodeJS stack
 
 #### Last update: 2.1.0
 
+#### MySql version
+
+Uses [hapi-plugin-mysql](https://www.npmjs.com/package/hapi-plugin-mysql)
+
 #### Docs:
 
 * [rutha - A Hapi and Angular boilerplate stack - English](http://yoworkeo.blogspot.com/2015/02/rutha-hapi-and-angular-boilerplate-stack.html)
@@ -28,7 +32,7 @@ Pure pragmatic NodeJS stack
 * **AngularJS 1.5.x**
 * **Hapi 13.0.0**
 * **Jasmine NPM**
-* **Ionic**: Try [rutha-ionic](https://github.com/molekilla/rutha-ionic)
+
 
 ### Additional features
 * **Grunt JIT**: Is JIT for Grunt. No more waits.
@@ -39,7 +43,6 @@ Pure pragmatic NodeJS stack
 * **Visionmedia/debug** [module](https://github.com/visionmedia/debug) by default
 * [Chris Sevilleja's 'Easy Node authentication' local and facebook sample code for HapiJS](http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local)
 * Basic cssmin task
-* `grunt-nsp` support
 * [Istanbul code coverage support](http://gotwarlost.github.io/istanbul/)
 * Uses canned responses / server mocks / nobackend inspired by Euge's [canned responses](https://github.com/euge/canned-responses)
 * [Hapi Swagger](https://github.com/glennjones/hapi-swagger)
@@ -59,9 +62,6 @@ Pure pragmatic NodeJS stack
 * `npm start`: Serves API service
 * `npm test`: Runs Jasmine NPM specs
 * `npm run nsp`: Verifies modules that contains security issues
-* `grunt migrate:create [--name]`: Creates a migration task. Args: --name: migration name (optional)
-* `grunt migrate:up [--revision]`: Migrates up. Args: --revision: revision name (optional)
-* `grunt migrate:down [--revision]`: Migrates down. Args: --revision: revision name (optional)
 * `grunt docs`: Builds jsdoc3 documentation.
 
 ## Grunt Help - Frontend tasks

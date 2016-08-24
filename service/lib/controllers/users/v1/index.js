@@ -9,6 +9,7 @@ var debug = require('debug')('users:list');
  * @param {Object} reply - A Hapi Reply
  */
 exports.create = function(request, reply) {
+  // Use request.app.db.query(...); with mysql
     var server = request.server;
     var UserModel = server.app.mongoose.models.User;
     
